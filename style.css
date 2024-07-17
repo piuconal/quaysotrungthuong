@@ -48,25 +48,45 @@ body {
 #spinButton,
 #reSpinButton,
 #saveButton,
-#listButton {
+#listButton,
+#downloadButton {
   display: block;
-  margin: 10px auto;
-  padding: 20px 30px;
-  font-size: 1.2em;
+  /* margin: 10px auto; */
+  height: 50px;
+  width: 150px;
   background-color: rgb(54, 107, 207);
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 20px;
   font-weight: bold;
   color: aliceblue;
   outline-style: none;
 }
-#spinButton:hover {
+#spinButton {
+  height: 80px;
+  width: 80px;
+  font-size: 18px;
+  border-radius: 50%;
   background-color: red;
+}
+#saveButton {
+  height: 80px;
+  width: 80px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: rgb(54, 196, 85);
+}
+#downloadButton:hover {
+  background-color: rgb(170, 187, 23);
+  transform: scale(0.96);
+  transition: 0.2s ease-in-out;
+}
+#spinButton:hover {
+  background-color: rgb(202, 18, 119);
   transform: scale(0.96);
   transition: 0.2s ease-in-out;
 }
 #reSpinButton:hover {
-  background-color: rgb(62, 218, 96);
+  background-color: rgb(218, 62, 218);
   transform: scale(0.96);
   transition: 0.2s ease-in-out;
 }

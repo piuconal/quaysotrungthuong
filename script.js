@@ -538,7 +538,7 @@ function nextPrize() {
 }
 
 function spin() {
-  let spinTime = 200000; // 10 seconds
+  let spinTime = 2800000; // 10 seconds
   let interval = 100;
   let totalInterval = 0;
   result.textContent = "";
@@ -697,3 +697,27 @@ document.getElementById("listButton").addEventListener("click", () => {
   );
   winnerListModal.show();
 });
+
+function downloadExcel() {
+  // Create a workbook and worksheet
+  const wb = XLSX.utils.book_new();
+  const ws_data = [["Mã", "Tên", "Giải thưởng"]]; // Column headers
+
+  // Add data
+  winners.forEach((winner) => {
+    ws_data.push([winner.code, winner.name, winner.prize]);
+  });
+
+  const ws = XLSX.utils.aoa_to_sheet(ws_data);
+
+  // Append worksheet to workbook
+  XLSX.utils.book_append_sheet(wb, ws, "Danh Sách Trúng Thưởng");
+
+  // Write the workbook and trigger download
+  XLSX.writeFile(wb, "DanhSachTrungThuong.xlsx");
+}
+
+// Add event listener to download button
+document
+  .getElementById("downloadButton")
+  .addEventListener("click", downloadExcel);

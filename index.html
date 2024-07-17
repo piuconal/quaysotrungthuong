@@ -21,11 +21,12 @@
       <div class="box"></div>
       <div class="box"></div>
     </div>
-    <div style="display: flex; gap: 20px">
+    <div style="display: flex; gap: 20px; align-items: center;">
+      <button id="downloadButton" class="btn btn-success">TẢI XUỐNG</button>
+      <button id="listButton" class="btn btn-secondary">DANH SÁCH</button>
       <button id="spinButton">QUAY</button>
       <button id="reSpinButton" style="display: none">QUAY LẠI</button>
       <button id="saveButton" class="btn btn-info">LƯU</button>
-      <button id="listButton" class="btn btn-secondary">DANH SÁCH</button>
     </div>
     <div class="prize-counter" id="prizeCounter"></div>
     <div id="result"></div>
@@ -103,6 +104,7 @@
     >
       Đã lưu thành công!
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
