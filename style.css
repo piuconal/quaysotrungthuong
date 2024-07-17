@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background-image: url("back6.png");
+  /* background-image: url("back6.png"); */
   background-repeat: no-repeat;
   background-position: center;
   font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   flex-direction: column;
 }
 #container {
