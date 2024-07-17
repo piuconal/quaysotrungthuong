@@ -134,6 +134,6 @@ body {
   position: absolute;
 }
 #winnerList {
-    max-height: 300px; /* Đặt chiều cao cố định */
-    overflow-y: auto; /* Kích hoạt thanh cuộn khi nội dung vượt quá */
-  }
+  max-height: 300px; /* Đặt chiều cao cố định */
+  overflow-y: auto; /* Kích hoạt thanh cuộn khi nội dung vượt quá */
+}
