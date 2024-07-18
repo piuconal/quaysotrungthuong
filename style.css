@@ -36,13 +36,12 @@ body {
 #result {
   position: absolute;
   margin-top: -30px;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   background-color: #598cda;
   border-radius: 20px;
   padding: 10px 160px;
   color: aliceblue;
-  text-transform: uppercase;
   font-weight: bold;
 }
 #spinButton,
