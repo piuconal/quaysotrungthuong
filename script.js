@@ -534,6 +534,13 @@ function nextPrize() {
   updatePrizeCounter();
 }
 
+function removeWinnerFromData(winnerCode) {
+  const index = data.findIndex((item) => item[0] === winnerCode);
+  if (index !== -1) {
+    data.splice(index, 1);
+  }
+}
+
 function spin() {
   let spinTime = 2800000; // 10 seconds
   let interval = 100;
@@ -559,6 +566,7 @@ function spin() {
       // Play winSound
       winSound.play();
       reSpinButton.style.display = "block";
+      removeWinnerFromData(finalItem[0]);
     } else {
       boxes.forEach((box) => (box.textContent = getRandomDigit()));
       totalInterval += interval;
