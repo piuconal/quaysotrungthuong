@@ -28,7 +28,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5em;
   border-radius: 20px;
   background-color: aliceblue;
   font-size: 70px;
@@ -192,5 +191,36 @@ body {
   }
   #saveSuccessMessage {
     margin-top: 610px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1700px) {
+  .box {
+    margin-top: -50px;
+    width: 90px;
+    height: 90px;
+    font-size: 60px;
+  }
+  #result {
+    margin-top: -30px;
+    font-size: 20px;
+  }
+  .slideshow-container {
+    position: absolute;
+    width: 350px;
+    margin-right: -1230px;
+    margin-bottom: -220px;
+    overflow: hidden;
+  }
+
+  .slideshow-container img {
+    width: 280px;
+    height: 450px;
+    border-radius: 20px;
+  }
+
+  .controls {
+    margin-top: 10px;
+    margin-left: -60px;
   }
 }
