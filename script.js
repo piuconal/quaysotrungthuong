@@ -325,6 +325,52 @@ function removeWinnerFromData(winnerCode) {
   }
 }
 
+// update
+let spinHistory = [];
+function saveWinnerToMockAPI(winner) {
+  const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/test"; // URL của API MockAPI
+
+  fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(winner),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Người trúng thưởng đã được lưu vào MockAPI:", data);
+    })
+    .catch((error) => {
+      console.error("Lỗi khi lưu người trúng thưởng vào MockAPI:", error);
+    });
+}
+
+function saveSpinHistory() {
+  const currentSpin = {
+    code:
+      boxes[0].textContent +
+      boxes[1].textContent +
+      boxes[2].textContent +
+      boxes[3].textContent +
+      boxes[4].textContent +
+      boxes[5].textContent +
+      boxes[6].textContent +
+      boxes[7].textContent,
+    name: result.textContent,
+    prize: prizes[currentPrizeIndex].name,
+    timestamp: Math.floor(Date.now() / 1000),
+  };
+
+  spinHistory.push(currentSpin);
+  saveWinnerToMockAPI(currentSpin);
+
+  console.log(
+    `Đã lưu tự động: ${currentSpin.code} - ${currentSpin.name} - ${currentSpin.prize}`
+  );
+}
+// end
+
 function spin() {
   let spinTime = 2800000;
   let interval = 100;
@@ -348,6 +394,9 @@ function spin() {
       winSound.play();
       reSpinButton.style.display = "block";
       removeWinnerFromData(finalItem[0]);
+      // update
+      saveSpinHistory();
+      // end
     } else {
       boxes.forEach((box) => (box.textContent = getRandomDigit()));
       totalInterval += interval;
@@ -486,3 +535,51 @@ function downloadExcel() {
 document
   .getElementById("downloadButton")
   .addEventListener("click", downloadExcel);
+
+// update
+function loadHistoryFromMockAPI() {
+  const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/test";
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      spinHistory = data;
+      showHistoryList();
+    })
+    .catch((error) => {
+      console.error("Lỗi khi tải lịch sử từ MockAPI:", error);
+    });
+}
+
+function showHistoryList() {
+  const historyList = document.getElementById("historyList");
+  historyList.innerHTML = "";
+
+  spinHistory.forEach((spin) => {
+    const listItem = document.createElement("li");
+    listItem.classList.add("list-group-item");
+
+    const spinDate = new Date(spin.timestamp * 1000);
+
+    const formattedDate = spinDate.toLocaleString("vi-VN", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    listItem.innerHTML = `${spin.code} - ${spin.name} - Giải ${spin.prize}<br>🕒Thời gian: ${formattedDate}`;
+    historyList.appendChild(listItem);
+  });
+}
+
+document.getElementById("historyButton").addEventListener("click", () => {
+  loadHistoryFromMockAPI();
+  const historyListModal = new bootstrap.Modal(
+    document.getElementById("historyListModal")
+  );
+  historyListModal.show();
+});
+// end

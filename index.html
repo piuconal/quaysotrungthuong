@@ -13,6 +13,25 @@
 
 <body>
   <div class="container-fluid d-flex align-items-center justify-content-center flex-column" style="position: relative;">
+    <button id="historyButton" class="btn btn-warning">LỊCH SỬ QUAY</button>
+    <!-- Modal để hiển thị danh sách lịch sử -->
+    <div class="modal fade" id="historyListModal" tabindex="-1" aria-labelledby="historyListModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="historyListModalLabel">Lịch Sử Quay Thưởng</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul id="historyList" class="list-group">
+              <!-- Danh sách lịch sử sẽ được chèn vào đây -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <video id="xyz" src="assets/video/test.mp4" autoplay loop muted>
     </video>
     <!-- <div class="slideshow-container">
