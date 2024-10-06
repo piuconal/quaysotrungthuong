@@ -280,13 +280,13 @@ const data = [
 ];
 
 const prizes = [
-  { name: "KHUYẾN KHÍCH", count: 21 },
-  { name: "NĂM", count: 15 },
-  { name: "TƯ", count: 15 },
-  { name: "BA", count: 10 },
+  // { name: "KHUYẾN KHÍCH", count: 21 },
+  // { name: "NĂM", count: 15 },
+  { name: "BỐN", count: 7 },
+  { name: "BA", count: 5 },
   { name: "NHÌ", count: 3 },
   { name: "NHẤT", count: 1 },
-  { name: "ĐẶC BIỆT", count: 1 },
+  // { name: "ĐẶC BIỆT", count: 1 },
 ];
 let currentPrizeIndex = 0;
 let currentCount = 0;

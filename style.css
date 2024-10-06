@@ -12,6 +12,10 @@ body {
   margin: 0 auto;
   flex-direction: column;
 }
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
 #container {
   display: flex;
   justify-content: center;
@@ -26,14 +30,15 @@ body {
 #result {
   position: absolute;
   text-align: center;
-  background-color: #598cda;
-  color: aliceblue;
+  background-color: #bfbf3e;
+  color: rgb(49, 51, 53);
   font-weight: bold;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(255, 223, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(255, 223, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(255, 223, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(255, 223, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 #spinButton,
 #reSpinButton,
@@ -125,7 +130,7 @@ video#xyz {
 
 @media only screen and (min-width: 1200px) {
   #container {
-    margin-top: -320px;
+    margin-top: -265px;
     gap: 10px;
     margin-bottom: 20px;
   }
@@ -136,7 +141,7 @@ video#xyz {
     font-size: 70px;
   }
   #result {
-    margin-top: 30px;
+    margin-top: 140px;
     font-size: 24px;
     border-radius: 20px;
     padding: 10px 40px;
@@ -164,7 +169,7 @@ video#xyz {
     border-radius: 50%;
   }
   .prize-counter {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
     padding: 10px 30px;
     border-radius: 40px;
@@ -190,7 +195,7 @@ video#xyz {
   }
 
   #saveSuccessMessage {
-    margin-top: 850px;
+    margin-top: 750px;
   }
   #winnerList {
     max-height: 300px;
