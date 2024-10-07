@@ -39,6 +39,7 @@ body {
 #saveButton,
 #listButton,
 #downloadButton {
+  z-index: 999;
   display: block;
   background-color: rgb(54, 107, 207);
   font-weight: bold;
