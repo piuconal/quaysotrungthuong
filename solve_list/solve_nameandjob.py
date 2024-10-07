@@ -7,7 +7,7 @@ wb = openpyxl.load_workbook(r'C:\Users\Admin\Desktop\quaysotrungthuong\solve_lis
 sheets = wb.sheetnames
 
 # Lấy sheet thứ hai
-sheet = wb[sheets[1]]
+sheet = wb[sheets[2]]
 
 # Đọc dữ liệu từ sheet và in hai cột đầu tiên
 for row in sheet.iter_rows(min_row=1, max_col=3, max_row=sheet.max_row, values_only=True):
