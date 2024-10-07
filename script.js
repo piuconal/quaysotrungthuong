@@ -551,11 +551,37 @@ function loadHistoryFromMockAPI() {
     });
 }
 
+// function showHistoryList() {
+//   const historyList = document.getElementById("historyList");
+//   historyList.innerHTML = "";
+
+//   spinHistory.forEach((spin) => {
+//     const listItem = document.createElement("li");
+//     listItem.classList.add("list-group-item");
+
+//     const spinDate = new Date(spin.timestamp * 1000);
+
+//     const formattedDate = spinDate.toLocaleString("vi-VN", {
+//       day: "2-digit",
+//       month: "2-digit",
+//       year: "numeric",
+//       hour: "2-digit",
+//       minute: "2-digit",
+//       second: "2-digit",
+//     });
+
+//     listItem.innerHTML = `${spin.code} - ${spin.name} - Giải ${spin.prize}<br>🕒Thời gian: ${formattedDate}`;
+//     historyList.appendChild(listItem);
+//   });
+// }
+
 function showHistoryList() {
   const historyList = document.getElementById("historyList");
   historyList.innerHTML = "";
 
-  spinHistory.forEach((spin) => {
+  const reversedHistory = [...spinHistory].reverse();
+
+  reversedHistory.forEach((spin) => {
     const listItem = document.createElement("li");
     listItem.classList.add("list-group-item");
 
