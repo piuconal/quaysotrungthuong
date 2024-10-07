@@ -30,15 +30,9 @@ body {
 #result {
   position: absolute;
   text-align: center;
-  background-color: #bfbf3e;
-  color: rgb(49, 51, 53);
+  color: #000000;
   font-weight: bold;
-  box-shadow: rgba(255, 223, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(255, 223, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(255, 223, 0, 0.1) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(255, 223, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  z-index: 99;
 }
 #spinButton,
 #reSpinButton,
@@ -127,7 +121,20 @@ video#xyz {
   height: auto;
   position: relative;
 }
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
 
+img#vm {
+  width: 120px;
+}
 @media only screen and (min-width: 1200px) {
   #container {
     margin-top: -265px;
@@ -141,10 +148,13 @@ video#xyz {
     font-size: 70px;
   }
   #result {
-    margin-top: 140px;
+    margin-top: 30px;
     font-size: 24px;
-    border-radius: 20px;
-    padding: 10px 40px;
+    border-radius: 5px;
+    padding: 20px 40px;
+    background: rgb(250, 255, 255);
+    display: none;
+    line-height: 1.5;
   }
   #spinButton,
   #reSpinButton,
@@ -219,5 +229,10 @@ video#xyz {
   #historyList {
     max-height: 450px;
     overflow-y: auto;
+  }
+  #result p {
+    text-align: left;
+    margin: 5px 0;
+    font-weight: 400;
   }
 }
