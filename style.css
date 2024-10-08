@@ -169,104 +169,119 @@ img#vm {
   width: 120px;
 }
 
-@media only screen and (min-width: 1200px) {
-  #container {
-    margin-top: -265px;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .box {
-    width: 90px;
-    height: 90px;
-    border-radius: 26px;
-    font-size: 70px;
-  }
-  #result {
-    margin-top: -70px;
-    font-size: 24px;
-    border-radius: 5px;
-    padding: 20px 40px;
-    background: rgb(250, 255, 255);
-    display: none;
-    line-height: 1.5;
-  }
-  #spinButton,
-  #reSpinButton,
-  #saveButton,
-  #listButton,
-  #downloadButton {
-    height: 50px;
-    width: 150px;
-    font-size: 16px;
-    border-radius: 20px;
-  }
-  #spinButton {
-    height: 80px;
-    width: 80px;
-    font-size: 16px;
-    border-radius: 50%;
-  }
-  #saveButton {
-    height: 60px;
-    width: 60px;
-    font-size: 13px;
-    border-radius: 50%;
-  }
-  .prize-counter {
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 10px 30px;
-    border-radius: 40px;
-  }
-  .slideshow-container {
-    position: absolute;
-    width: 300px;
-    height: 440px;
-    bottom: 0px;
-    right: 30px;
-    box-sizing: border-box;
-  }
-  .slideshow-container img {
-    width: 300px;
-    height: 440px;
-    border-radius: 20px;
-  }
+#container {
+  margin-top: -265px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.box {
+  width: 90px;
+  height: 90px;
+  border-radius: 26px;
+  font-size: 70px;
+}
+#result {
+  margin-top: -70px;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 20px 40px;
+  background: rgb(250, 255, 255);
+  display: none;
+  line-height: 1.5;
+}
+#spinButton,
+#reSpinButton,
+#saveButton,
+#listButton,
+#downloadButton {
+  height: 50px;
+  width: 150px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+#spinButton {
+  height: 80px;
+  width: 80px;
+  font-size: 16px;
+  border-radius: 50%;
+}
+#saveButton {
+  height: 60px;
+  width: 60px;
+  font-size: 13px;
+  border-radius: 50%;
+}
+.prize-counter {
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+.slideshow-container {
+  position: absolute;
+  width: 300px;
+  height: 440px;
+  bottom: 0px;
+  right: 30px;
+  box-sizing: border-box;
+}
+.slideshow-container img {
+  width: 300px;
+  height: 440px;
+  border-radius: 20px;
+}
 
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-  }
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
 
-  #saveSuccessMessage {
-    margin-top: 750px;
-  }
-  #winnerList {
-    max-height: 300px;
-  }
-  #historyButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
+#saveSuccessMessage {
+  margin-top: 750px;
+}
+#winnerList {
+  max-height: 300px;
+}
+#historyButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 4px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  #historyButton:hover {
-    background-color: #0056b3;
-  }
-  #historyList {
-    max-height: 450px;
-    overflow-y: auto;
-  }
-  #result p {
-    text-align: left;
-    margin: 5px 0;
-    font-weight: 400;
-  }
+#deleteButton {
+  position: fixed;
+  font-size: 13px;
+  bottom: 50px;
+  right: 20px;
+  padding: 4px 12px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#historyButton:hover {
+  background-color: #0056b3;
+}
+#deleteButton:hover {
+  background-color: #b32a00;
+}
+#historyList {
+  max-height: 450px;
+  overflow-y: auto;
+}
+#result p {
+  text-align: left;
+  margin: 5px 0;
+  font-weight: 400;
 }

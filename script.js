@@ -9,15 +9,22 @@ fetch("data.json")
     console.error("Lỗi khi tải dữ liệu từ file JSON:", error);
   });
 
-const prizes = [
-  // { name: "KHUYẾN KHÍCH", count: 21 },
-  // { name: "NĂM", count: 15 },
-  { name: "BỐN", count: 7 },
-  { name: "BA", count: 5 },
-  { name: "NHÌ", count: 3 },
-  { name: "NHẤT", count: 1 },
-  // { name: "ĐẶC BIỆT", count: 1 },
-];
+let prizes = [];
+
+async function fetchPrizes() {
+  try {
+    const response = await fetch(
+      "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"
+    );
+    prizes = await response.json();
+    updatePrizeCounter();
+  } catch (error) {
+    console.error("Error fetching prizes:", error);
+  }
+}
+
+fetchPrizes();
+
 let currentPrizeIndex = 0;
 let currentCount = 0;
 
@@ -35,16 +42,67 @@ function getRandomDigit() {
 }
 
 function updatePrizeCounter() {
-  prizeCounter.textContent = `💥${currentCount}/${prizes[currentPrizeIndex].count} GIẢI ${prizes[currentPrizeIndex].name}`;
+  // Tìm giải thưởng hiện tại
+  let currentPrize = prizes.find((prize) => prize.spun < prize.count);
+
+  if (currentPrize) {
+    // Cập nhật thông tin giải thưởng hiện tại
+    prizeCounter.textContent = `💥 Đã quay ${currentPrize.spun} / ${currentPrize.count} GIẢI ${currentPrize.name}`;
+  } else {
+    // Nếu không còn giải thưởng nào
+    prizeCounter.textContent = "🥇 GIẢI NHẤT";
+  }
+}
+
+function postPrizeUpdate(prize) {
+  const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"; // URL API của bạn
+
+  // Tạo một đối tượng chứa dữ liệu cần gửi
+  const data = {
+    name: prize.name,
+    spun: prize.spun,
+    count: prize.count,
+  };
+
+  // Kiểm tra ID của phần thưởng
+  if (!prize.id) {
+    console.error("Prize ID is undefined. Cannot update prize.");
+    return; // Thoát hàm nếu ID không xác định
+  }
+
+  // Gửi yêu cầu PUT đến API
+  fetch(apiUrl + `/${prize.id}`, {
+    // Thêm ID để cập nhật đúng phần thưởng
+    method: "PUT", // Sử dụng PUT để cập nhật
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((updatedPrize) => {
+      console.log("Prize updated successfully:", updatedPrize);
+    })
+    .catch((error) => {
+      console.error("Error updating prize:", error);
+    });
 }
 
 function nextPrize() {
-  if (currentCount < prizes[currentPrizeIndex].count) {
-    currentCount++;
+  const currentPrize = prizes[currentPrizeIndex];
+
+  if (currentPrize.spun < currentPrize.count) {
+    currentPrize.spun++;
   } else {
     currentPrizeIndex++;
-    currentCount = 1;
   }
+  postPrizeUpdate(currentPrize);
+
   updatePrizeCounter();
 }
 
@@ -120,13 +178,17 @@ function spin() {
   const spinInterval = setInterval(() => {
     if (totalInterval >= spinTime) {
       clearInterval(spinInterval);
-      const finalItem = data[Math.floor(Math.random() * data.length)];
+      let finalItem;
+
+      do {
+        finalItem = data[Math.floor(Math.random() * data.length)];
+      } while (spinHistory.includes(finalItem[0]));
+
       const finalDigits = finalItem[0].split("");
       boxes.forEach((box, index) => (box.textContent = finalDigits[index]));
 
       const resultInfo = finalItem[1].split(",");
 
-      // Cập nhật nội dung HTML
       result.innerHTML = `
         <h1>${resultInfo[0] || "Chưa có thông tin"}</h1>
         <p>${resultInfo[1] || "Chưa có thông tin"}</p>
@@ -169,7 +231,6 @@ spinButton.addEventListener("click", () => {
   spin();
   nextPrize();
 });
-
 reSpinButton.addEventListener("click", () => {
   reSpinButton.style.display = "none";
   spin();
@@ -200,6 +261,7 @@ $(document).ready(function () {
 
   setInterval(nextSlide, 2000);
 });
+
 let winners = [];
 function removeDuplicates() {
   let seen = new Map();
@@ -224,6 +286,8 @@ function autoRemoveDuplicates() {
   }, 10);
 }
 
+const apiUrl = "https://67055d6f031fd46a830faee3.mockapi.io/members"; // Đường dẫn tới API member
+
 function saveWinner() {
   const currentWinner = {
     code:
@@ -235,22 +299,37 @@ function saveWinner() {
       boxes[5].textContent +
       boxes[6].textContent +
       boxes[7].textContent,
-    name: result.textContent,
+    name: result.textContent || "Chưa rõ tên",
     prize: prizes[currentPrizeIndex].name,
   };
-  winners.push(currentWinner);
-  const saveSuccessMessage = document.getElementById("saveSuccessMessage");
-  saveSuccessMessage.style.display = "block";
-  result.textContent = "";
-  setTimeout(() => {
-    saveSuccessMessage.style.display = "none";
-    autoRemoveDuplicates();
-  }, 1000);
 
-  console.log(
-    `Đã lưu: ${currentWinner.code} - ${currentWinner.name} - ${currentWinner.prize}`
-  );
-  showWinnerList();
+  // Gửi yêu cầu POST tới MockAPI
+  fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(currentWinner),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Người trúng thưởng đã được lưu:", data);
+      const saveSuccessMessage = document.getElementById("saveSuccessMessage");
+      saveSuccessMessage.style.display = "block";
+      result.textContent = ""; // Xóa kết quả sau khi lưu
+      setTimeout(() => {
+        saveSuccessMessage.style.display = "none";
+      }, 1000);
+      showWinnerList(); // Gọi hàm để hiển thị danh sách
+    })
+    .catch((error) => {
+      console.error("Lỗi khi lưu người trúng thưởng:", error);
+    });
 }
 
 document.getElementById("saveButton").addEventListener("click", () => {
@@ -259,21 +338,132 @@ document.getElementById("saveButton").addEventListener("click", () => {
 
 function showWinnerList() {
   const winnerList = document.getElementById("winnerList");
-  winnerList.innerHTML = "";
-  winners.forEach((winner) => {
-    const listItem = document.createElement("li");
-    listItem.classList.add("list-group-item");
-    listItem.textContent = `${winner.code} - ${winner.name} - Giải ${winner.prize}`;
-    winnerList.appendChild(listItem);
-  });
+  winnerList.innerHTML = ""; // Xóa danh sách cũ
+
+  // Gửi yêu cầu GET đến MockAPI để lấy danh sách người thắng
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((winners) => {
+      winners.forEach((winner) => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("list-group-item");
+        listItem.textContent = `${winner.code} - ${winner.name} - Giải ${winner.prize}`;
+        winnerList.appendChild(listItem);
+      });
+    })
+    .catch((error) => {
+      console.error("Lỗi khi lấy danh sách người thắng từ MockAPI:", error);
+    });
 }
 
 document.getElementById("listButton").addEventListener("click", () => {
-  showWinnerList();
+  showWinnerList(); // Gọi hàm để hiển thị danh sách người thắng
   const winnerListModal = new bootstrap.Modal(
     document.getElementById("winnerListModal")
   );
   winnerListModal.show();
+});
+
+const defaultPrizes = [
+  {
+    name: "BỐN",
+    count: 7,
+    spun: 0,
+    id: "1",
+  },
+  {
+    name: "BA",
+    count: 5,
+    spun: 1,
+    id: "2",
+  },
+  {
+    name: "NHÌ",
+    count: 3,
+    spun: 1,
+    id: "3",
+  },
+  {
+    name: "NHẤT",
+    count: 1,
+    spun: 1,
+    id: "4",
+  },
+];
+
+async function resetPrizes() {
+  const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"; // Đường dẫn tới API
+
+  // Xóa tất cả dữ liệu trong prizes
+  const prizesResponse = await fetch(apiUrl);
+  const prizes = await prizesResponse.json();
+
+  for (const prize of prizes) {
+    await fetch(`${apiUrl}/${prize.id}`, {
+      method: "DELETE",
+    });
+  }
+
+  console.log("Đã xóa tất cả dữ liệu trong prizes.");
+
+  // Sau khi xóa, thêm lại dữ liệu mặc định
+  for (const prize of defaultPrizes) {
+    await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(prize),
+    });
+  }
+
+  console.log("Đã thêm lại dữ liệu mặc định vào prizes.");
+}
+
+async function deleteAllWinners() {
+  const memberApiUrl = "https://67055d6f031fd46a830faee3.mockapi.io/members"; // Endpoint cho members
+  const testApiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/test"; // Endpoint cho test
+
+  try {
+    // Xóa tất cả người thắng từ members
+    const membersResponse = await fetch(memberApiUrl);
+    const members = await membersResponse.json();
+
+    for (const member of members) {
+      await fetch(`${memberApiUrl}/${member.id}`, {
+        method: "DELETE", // Phương thức DELETE cho từng bản ghi
+      });
+    }
+    console.log("Đã xóa tất cả người thắng trong members.");
+
+    // Xóa tất cả người thắng từ test
+    const testResponse = await fetch(testApiUrl);
+    const tests = await testResponse.json();
+
+    for (const test of tests) {
+      await fetch(`${testApiUrl}/${test.id}`, {
+        method: "DELETE", // Phương thức DELETE cho từng bản ghi
+      });
+    }
+    console.log("Đã xóa tất cả người thắng trong test.");
+
+    // Reset dữ liệu prizes về trạng thái mặc định
+    await resetPrizes(); // Gọi hàm reset dữ liệu prizes
+  } catch (error) {
+    console.error("Lỗi khi xóa dữ liệu:", error);
+  }
+}
+
+document.getElementById("deleteButton").addEventListener("click", () => {
+  const confirmation = confirm("Bạn có chắc chắn muốn xóa tất cả người thắng?");
+  if (confirmation) {
+    deleteAllWinners();
+  }
 });
 
 function downloadExcel() {
