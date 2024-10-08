@@ -33,7 +33,38 @@ body {
   color: #000000;
   font-weight: bold;
   z-index: 99;
+  border: 10px solid #ffc400;
+  box-shadow: 0 0 15px #ffc400;
+  animation: borderColorChange 3s infinite linear;
 }
+#result h1 {
+  font-style: oblique;
+  margin-bottom: 20px;
+}
+
+@keyframes borderColorChange {
+  0% {
+    border-color: #ffc400;
+    box-shadow: 0 0 15px #ffc400;
+  }
+  25% {
+    border-color: #ff5733;
+    box-shadow: 0 0 15px #ff5733;
+  }
+  50% {
+    border-color: #fff133;
+    box-shadow: 0 0 15px #fff133;
+  }
+  75% {
+    border-color: #ffb833;
+    box-shadow: 0 0 15px #ffb833;
+  }
+  100% {
+    border-color: #ffc400;
+    box-shadow: 0 0 15px #ffc400;
+  }
+}
+
 #spinButton,
 #reSpinButton,
 #saveButton,
@@ -136,6 +167,7 @@ video#xyz {
 img#vm {
   width: 120px;
 }
+
 @media only screen and (min-width: 1200px) {
   #container {
     margin-top: -265px;
@@ -149,7 +181,7 @@ img#vm {
     font-size: 70px;
   }
   #result {
-    margin-top: -30px;
+    margin-top: -70px;
     font-size: 24px;
     border-radius: 5px;
     padding: 20px 40px;
