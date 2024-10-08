@@ -142,6 +142,7 @@ body {
   background-color: #717171;
 }
 #saveSuccessMessage {
+  margin-bottom: 200px;
   position: absolute;
 }
 #winnerList {
