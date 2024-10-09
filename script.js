@@ -1,3 +1,4 @@
+// Lấy danh sách người tham dự
 let data = [];
 
 fetch("data.json")
@@ -9,6 +10,7 @@ fetch("data.json")
     console.error("Lỗi khi tải dữ liệu từ file JSON:", error);
   });
 
+// Lấy danh sách cơ cấu giải thưởng
 let prizes = [];
 
 async function fetchPrizes() {
@@ -25,6 +27,7 @@ async function fetchPrizes() {
 
 fetchPrizes();
 
+// Tạo các biến xử lý
 let currentPrizeIndex = 0;
 let currentCount = 0;
 
@@ -37,10 +40,12 @@ const prizeCounter = document.getElementById("prizeCounter");
 const spinSound = document.getElementById("spinSound");
 const winSound = document.getElementById("winSound");
 
+// Random số
 function getRandomDigit() {
   return Math.floor(Math.random() * 10).toString();
 }
 
+// Cập nhật hiển thị số lượng giải quay
 function updatePrizeCounter() {
   // Tìm giải thưởng hiện tại
   let currentPrize = prizes.find((prize) => prize.spun < prize.count);
@@ -53,7 +58,7 @@ function updatePrizeCounter() {
     prizeCounter.textContent = "🥇 GIẢI NHẤT";
   }
 }
-
+// Post MOCKAPI
 function postPrizeUpdate(prize) {
   const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"; // URL API của bạn
 
@@ -93,6 +98,7 @@ function postPrizeUpdate(prize) {
     });
 }
 
+// Giải thưởng tiếp theo
 function nextPrize() {
   const currentPrize = prizes[currentPrizeIndex];
 
@@ -105,7 +111,7 @@ function nextPrize() {
 
   updatePrizeCounter();
 }
-
+// Tự động xóa khỏi danh sách
 function removeWinnerFromData(winnerCode) {
   const index = data.findIndex((item) => item[0] === winnerCode);
   if (index !== -1) {
@@ -113,7 +119,7 @@ function removeWinnerFromData(winnerCode) {
   }
 }
 
-// update
+// Danh sách đã quay
 let spinHistory = [];
 function saveWinnerToMockAPI(winner) {
   const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/test"; // URL của API MockAPI
@@ -133,7 +139,6 @@ function saveWinnerToMockAPI(winner) {
       console.error("Lỗi khi lưu người trúng thưởng vào MockAPI:", error);
     });
 }
-
 function saveSpinHistory() {
   const currentSpin = {
     code:
@@ -157,8 +162,8 @@ function saveSpinHistory() {
     `Đã lưu tự động: ${currentSpin.code} - ${currentSpin.name} - ${currentSpin.prize}`
   );
 }
-// end
 
+// xử lý quay
 function spin() {
   if (data.length === 0) {
     console.log("Chưa có dữ liệu, vui lòng đợi...");
@@ -235,8 +240,9 @@ reSpinButton.addEventListener("click", () => {
   reSpinButton.style.display = "none";
   spin();
 });
-
 updatePrizeCounter();
+
+// Slide
 $(document).ready(function () {
   let currentIndex = 0;
   const slides = $(".slide");
@@ -262,6 +268,7 @@ $(document).ready(function () {
   setInterval(nextSlide, 2000);
 });
 
+// Danh sách người thắng
 let winners = [];
 function removeDuplicates() {
   let seen = new Map();
@@ -279,13 +286,14 @@ function removeDuplicates() {
 
   showWinnerList();
 }
-
+// Tự động xóa trùng nhau
 function autoRemoveDuplicates() {
   setTimeout(() => {
     removeDuplicates();
   }, 10);
 }
 
+// Mock API danh sách đã lưu
 const apiUrl = "https://67055d6f031fd46a830faee3.mockapi.io/members"; // Đường dẫn tới API member
 
 function saveWinner() {
@@ -331,11 +339,11 @@ function saveWinner() {
       console.error("Lỗi khi lưu người trúng thưởng:", error);
     });
 }
-
+// Lưu người thắng
 document.getElementById("saveButton").addEventListener("click", () => {
   saveWinner();
 });
-
+// Danh sách người thắng
 function showWinnerList() {
   const winnerList = document.getElementById("winnerList");
   winnerList.innerHTML = ""; // Xóa danh sách cũ
@@ -369,6 +377,7 @@ document.getElementById("listButton").addEventListener("click", () => {
   winnerListModal.show();
 });
 
+// Mặc định giải thưởng
 const defaultPrizes = [
   {
     name: "BỐN",
@@ -395,7 +404,11 @@ const defaultPrizes = [
     id: "4",
   },
 ];
-
+// Tạo delay post
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+// Reset giải thưởng
 async function resetPrizes() {
   const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"; // Đường dẫn tới API
 
@@ -413,18 +426,26 @@ async function resetPrizes() {
 
   // Sau khi xóa, thêm lại dữ liệu mặc định
   for (const prize of defaultPrizes) {
-    await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(prize),
     });
+
+    if (!response.ok) {
+      console.error(`Lỗi khi thêm prize: ${prize.name}`, response.statusText);
+    } else {
+      console.log(`Thêm prize: ${prize.name} thành công.`);
+    }
+
+    await delay(500); // Tạm dừng 500ms giữa các POST request
   }
 
   console.log("Đã thêm lại dữ liệu mặc định vào prizes.");
 }
-
+// Xóa tất cả người thắng + số lượng đã quay
 async function deleteAllWinners() {
   const memberApiUrl = "https://67055d6f031fd46a830faee3.mockapi.io/members"; // Endpoint cho members
   const testApiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/test"; // Endpoint cho test
@@ -458,34 +479,61 @@ async function deleteAllWinners() {
     console.error("Lỗi khi xóa dữ liệu:", error);
   }
 }
-
+// Xử lý
 document.getElementById("deleteButton").addEventListener("click", () => {
   const confirmation = confirm("Bạn có chắc chắn muốn xóa tất cả người thắng?");
   if (confirmation) {
     deleteAllWinners();
+
+    // Hiển thị nền đen với hiệu ứng loading
+    document.getElementById("loadingOverlay").style.display = "flex";
+
+    // Sau 4 giây, tải lại trang
+    setTimeout(() => {
+      location.reload();
+    }, 4000);
   }
 });
 
+// Tải danh sách excel
 function downloadExcel() {
-  const wb = XLSX.utils.book_new();
-  const ws_data = [["Mã", "Tên", "Giải thưởng"]];
+  // Gửi yêu cầu GET tới MockAPI để lấy danh sách người thắng
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((winners) => {
+      // Chuyển đổi dữ liệu thành dạng phù hợp để xuất Excel
+      const worksheetData = winners.map((winner) => ({
+        Code: winner.code,
+        Name: winner.name,
+        Prize: winner.prize,
+      }));
 
-  winners.forEach((winner) => {
-    ws_data.push([winner.code, winner.name, winner.prize]);
-  });
+      // Tạo một worksheet từ dữ liệu
+      const worksheet = XLSX.utils.json_to_sheet(worksheetData);
 
-  const ws = XLSX.utils.aoa_to_sheet(ws_data);
+      // Tạo một workbook và thêm worksheet
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "Winners");
 
-  XLSX.utils.book_append_sheet(wb, ws, "Danh Sách Trúng Thưởng");
+      // Xuất file Excel
+      XLSX.writeFile(workbook, "winners_list.xlsx");
 
-  XLSX.writeFile(wb, "DanhSachTrungThuong.xlsx");
+      console.log("File Excel đã được tải về");
+    })
+    .catch((error) => {
+      console.error("Lỗi khi tải danh sách người thắng:", error);
+    });
 }
-
 document
   .getElementById("downloadButton")
   .addEventListener("click", downloadExcel);
 
-// update
+// Gửi lịch sử quay lên MOCK
 function loadHistoryFromMockAPI() {
   const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/test";
 
@@ -499,7 +547,6 @@ function loadHistoryFromMockAPI() {
       console.error("Lỗi khi tải lịch sử từ MockAPI:", error);
     });
 }
-
 // function showHistoryList() {
 //   const historyList = document.getElementById("historyList");
 //   historyList.innerHTML = "";
@@ -549,7 +596,6 @@ function showHistoryList() {
     historyList.appendChild(listItem);
   });
 }
-
 document.getElementById("historyButton").addEventListener("click", () => {
   loadHistoryFromMockAPI();
   const historyListModal = new bootstrap.Modal(
