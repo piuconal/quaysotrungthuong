@@ -193,9 +193,12 @@ function spin() {
       boxes.forEach((box, index) => (box.textContent = finalDigits[index]));
 
       const resultInfo = finalItem[1].split(",");
-
+      const currentPrize = prizes[currentPrizeIndex];
       result.innerHTML = `
         <h1>${resultInfo[0] || "Chưa có thông tin"}</h1>
+        <p style="color: red;text-align: center;">GIẢI ${
+          currentPrize.name || "Chưa có thông tin giải"
+        }</p>
         <p>${resultInfo[1] || "Chưa có thông tin"}</p>
         <p>${resultInfo[2] || "Chưa có thông tin"}</p>
         <p>${resultInfo[3] || "Chưa có thông tin"}</p>
@@ -491,7 +494,7 @@ document.getElementById("deleteButton").addEventListener("click", () => {
     // Sau 4 giây, tải lại trang
     setTimeout(() => {
       location.reload();
-    }, 4000);
+    }, 9000);
   }
 });
 
