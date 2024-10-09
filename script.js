@@ -52,10 +52,10 @@ function updatePrizeCounter() {
 
   if (currentPrize) {
     // Cập nhật thông tin giải thưởng hiện tại
-    prizeCounter.textContent = `💥 Đã quay ${currentPrize.spun} / ${currentPrize.count} GIẢI ${currentPrize.name}`;
+    prizeCounter.textContent = `💥 Đã quay ${currentPrize.spun} / ${currentPrize.count} GIẢI ${currentPrize.name} 💥`;
   } else {
     // Nếu không còn giải thưởng nào
-    prizeCounter.textContent = "🥇 GIẢI NHẤT";
+    prizeCounter.textContent = "🎊 ĐẶC BIỆT 🎊";
   }
 }
 // Post MOCKAPI
@@ -178,6 +178,8 @@ function spin() {
   winSound.currentTime = 0;
 
   spinSound.play();
+  spinButton.style.display = "none"; // Ẩn nút quay
+  reSpinButton.style.display = "none";
   document.getElementById("result").style.display = "none";
   document.getElementById("overlay").style.display = "none";
   const spinInterval = setInterval(() => {
@@ -210,9 +212,10 @@ function spin() {
       spinSound.pause();
       spinSound.currentTime = 0;
       winSound.play();
-      reSpinButton.style.display = "block";
       removeWinnerFromData(finalItem[0]);
       saveSpinHistory();
+      spinButton.style.display = "block";
+      reSpinButton.style.display = "block";
     } else {
       boxes.forEach((box) => (box.textContent = getRandomDigit()));
       totalInterval += interval;
@@ -221,18 +224,13 @@ function spin() {
   }, interval);
 }
 document.addEventListener("click", function (event) {
-  document.addEventListener("click", function (event) {
-    const resultDiv = document.getElementById("result");
-    const overlay = document.getElementById("overlay");
+  const resultDiv = document.getElementById("result");
+  const overlay = document.getElementById("overlay");
 
-    if (
-      overlay.style.display === "block" &&
-      !resultDiv.contains(event.target)
-    ) {
-      resultDiv.style.display = "none";
-      overlay.style.display = "none";
-    }
-  });
+  if (overlay.style.display === "block" && !resultDiv.contains(event.target)) {
+    resultDiv.style.display = "none";
+    overlay.style.display = "none";
+  }
 });
 spinButton.addEventListener("click", () => {
   reSpinButton.style.display = "none";
@@ -383,25 +381,25 @@ document.getElementById("listButton").addEventListener("click", () => {
 // Mặc định giải thưởng
 const defaultPrizes = [
   {
-    name: "BỐN",
+    name: "BA",
     count: 7,
     spun: 0,
     id: "1",
   },
   {
-    name: "BA",
+    name: "NHÌ",
     count: 5,
     spun: 1,
     id: "2",
   },
   {
-    name: "NHÌ",
+    name: "NHẤT",
     count: 3,
     spun: 1,
     id: "3",
   },
   {
-    name: "NHẤT",
+    name: "ĐẶC BIỆT",
     count: 1,
     spun: 1,
     id: "4",
