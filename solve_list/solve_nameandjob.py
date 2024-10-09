@@ -29,7 +29,7 @@ for row in sheet.iter_rows(min_row=1, max_col=7, max_row=sheet.max_row, values_o
     col7_str = str(col7).upper() if isinstance(col7, str) else str(col7)
 
     # In kết quả
-    print(f'["{col1_str}", "{col2_str},📞Số điện thoại: {col3_str},✨Ngày/tháng/năm sinh: {col4_str},📌Phường/Xã: {col5_str},📌Quận/Huyện: {col6_str},📌Tỉnh/TP: {col7_str}"],')
+    print(f'["{col1_str}", "{col2_str},📞Số điện thoại: {col3_str},✨Số CCCD: {col4_str},📌Phường/Xã: {col5_str},📌Quận/Huyện: {col6_str},📌Tỉnh/TP: {col7_str}"],')
 
 # Đóng file Excel
 wb.close()
