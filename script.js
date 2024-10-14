@@ -394,7 +394,7 @@ const defaultPrizes = [
   },
   {
     name: "NHẤT",
-    count: 3,
+    count: 1,
     spun: 1,
     id: "3",
   },
