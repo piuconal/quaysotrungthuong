@@ -113,6 +113,9 @@ body {
   font-weight: bold;
   background-color: #d8dee7;
 }
+.prize-counter p {
+  margin-bottom: 5px;
+}
 .slideshow-container {
   overflow: hidden;
 }
@@ -202,18 +205,16 @@ img#vm {
 }
 #spinButton,
 #reSpinButton,
-#saveButton,
-#listButton,
-#downloadButton {
+#saveButton {
   height: 50px;
   width: 150px;
   font-size: 16px;
   border-radius: 20px;
 }
 #spinButton {
-  height: 60px;
-  width: 60px;
-  font-size: 13px;
+  height: 80px;
+  width: 80px;
+  font-size: 15px;
   border-radius: 50%;
 }
 #saveButton {
@@ -223,11 +224,44 @@ img#vm {
   border-radius: 50%;
 }
 .prize-counter {
+  display: flex;
+  position: absolute;
+  bottom: -60px;
   margin-top: 10px;
   font-size: 20px;
   padding: 10px 30px;
   border-radius: 40px;
 }
+#prizeCounter {
+  display: grid;                           /* Sử dụng Grid Layout */
+  grid-template-columns: repeat(4, 1fr);   /* 2 cột có chiều rộng bằng nhau */
+}
+
+#prizeCounter div {
+  color: #f10909;
+  padding: 2px;                           /* Padding cho các phần tử */
+  text-align: center;                      /* Căn giữa chữ */
+  animation: blink 1s infinite;            /* Hiệu ứng nhấp nháy */
+  transition: background-color 4s ease;  /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;                            /* Chữ hiện đầy đủ */
+  }
+  40% {
+    opacity: 0.2;                            /* Chữ mờ đi */
+  }
+}
+
+/* Hiệu ứng khi di chuột */
+#prizeCounter div:hover {
+  background-color: #e0f7fa;               /* Đổi màu nền khi hover */
+}
+
+
+
 /* .slideshow-container {
   position: absolute;
   width: 300px;
@@ -249,14 +283,17 @@ img#vm {
 } */
 
 #saveSuccessMessage {
+  z-index: 9999;
   margin-top: 750px;
 }
 #winnerList {
   max-height: 300px;
 }
 #historyButton {
+  width:120px;
+  height: 30px;
   position: fixed;
-  bottom: 20px;
+  bottom: 12px;
   right: 20px;
   padding: 4px 12px;
   background-color: #007bff;
@@ -269,9 +306,11 @@ img#vm {
 }
 
 #deleteButton {
+  width:120px;
+  height: 30px;
   position: fixed;
   font-size: 13px;
-  bottom: 50px;
+  bottom: 48px;
   right: 20px;
   padding: 4px 12px;
   color: white;
@@ -280,7 +319,36 @@ img#vm {
   cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+#listButton {
+  width:120px;
+  height: 30px;
+  position: fixed;
+  bottom: 48px;
+  left: 20px;
+  padding: 4px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#downloadButton {
+  width:120px;
+  height: 30px;
+  position: fixed;
+  bottom: 12px;
+  left: 20px;
+  padding: 4px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 #historyButton:hover {
   background-color: #0056b3;
 }

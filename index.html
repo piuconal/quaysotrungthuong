@@ -11,14 +11,16 @@
     href="https://play-lh.googleusercontent.com/-BnWmZBj6b9ycH3atIcK8TyCfaIgGf5aOrqx4BjWYIxpZbaFEnsYvEviD9_zBxS3NzUB" />
 </head>
 
-<body>
+<body style="background-color: black;">
   <div id="loadingOverlay">
     <div class="spinner"></div>
   </div>
-  <div class="container-fluid d-flex align-items-center justify-content-center flex-column mt-5" style="position: relative;">
+  <div class="container-fluid d-flex align-items-center justify-content-center flex-column mt-5"
+    style="position: relative;">
     <button id="historyButton" class="btn btn-warning">LỊCH SỬ QUAY</button>
     <button id="deleteButton" class="btn btn-danger">XÓA DỮ LIỆU</button>
-    <!-- Modal để hiển thị danh sách lịch sử -->
+    <button id="downloadButton" class="btn btn-success">TẢI XUỐNG</button>
+    <button id="listButton" class="btn btn-secondary">DANH SÁCH</button><!-- Modal để hiển thị danh sách lịch sử -->
     <div class="modal fade" id="historyListModal" tabindex="-1" aria-labelledby="historyListModalLabel"
       aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -71,14 +73,12 @@
       <div class="box"></div>
       <div class="box"></div>
     </div>
-    <div style="display: flex; gap: 20px; align-items: center">
-      <button id="downloadButton" class="btn btn-success">TẢI XUỐNG</button>
-      <button id="listButton" class="btn btn-secondary">DANH SÁCH</button>
+    <div style="display: flex; gap: 20px; align-items: center; flex-direction: column;">
       <button id="spinButton">QUAY</button>
       <button id="saveButton" class="btn btn-info">LƯU</button>
       <button id="reSpinButton" style="display: none">QUAY LẠI</button>
     </div>
-    <div class="prize-counter" id="prizeCounter" style="display: none;"></div>
+    <div class="prize-counter" id="prizeCounter"></div>
     <div id="overlay">
       <video autoplay loop muted>
         <source src="assets/video/chucmung.mp4" type="video/mp4">

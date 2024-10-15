@@ -10,23 +10,6 @@ fetch("data.json")
     console.error("Lỗi khi tải dữ liệu từ file JSON:", error);
   });
 
-// Lấy danh sách cơ cấu giải thưởng
-let prizes = [];
-
-async function fetchPrizes() {
-  try {
-    const response = await fetch(
-      "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"
-    );
-    prizes = await response.json();
-    updatePrizeCounter();
-  } catch (error) {
-    console.error("Error fetching prizes:", error);
-  }
-}
-
-fetchPrizes();
-
 // Tạo các biến xử lý
 let currentPrizeIndex = 0;
 let currentCount = 0;
@@ -36,28 +19,29 @@ const spinButton = document.getElementById("spinButton");
 const reSpinButton = document.getElementById("reSpinButton");
 const result = document.getElementById("result");
 const prizeCounter = document.getElementById("prizeCounter");
+const saveButton = document.getElementById("saveButton");
 
 const spinSound = document.getElementById("spinSound");
 const winSound = document.getElementById("winSound");
+saveButton.style.display = "none";
 
 // Random số
 function getRandomDigit() {
   return Math.floor(Math.random() * 10).toString();
 }
-
-// Cập nhật hiển thị số lượng giải quay
-function updatePrizeCounter() {
-  // Tìm giải thưởng hiện tại
-  let currentPrize = prizes.find((prize) => prize.spun < prize.count);
-
-  if (currentPrize) {
-    // Cập nhật thông tin giải thưởng hiện tại
-    prizeCounter.textContent = `💥 Đã quay ${currentPrize.spun} / ${currentPrize.count} GIẢI ${currentPrize.name} 💥`;
-  } else {
-    // Nếu không còn giải thưởng nào
-    prizeCounter.textContent = "🎊 ĐẶC BIỆT 🎊";
+async function fetchPrizes() {
+  try {
+    const response = await fetch(
+      "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"
+    );
+    prizes = await response.json();
+  } catch (error) {
+    console.error("Error fetching prizes:", error);
   }
 }
+
+fetchPrizes();
+
 // Post MOCKAPI
 function postPrizeUpdate(prize) {
   const apiUrl = "https://6702a224bd7c8c1ccd3f6b8a.mockapi.io/prizes"; // URL API của bạn
@@ -108,8 +92,6 @@ function nextPrize() {
     currentPrizeIndex++;
   }
   postPrizeUpdate(currentPrize);
-
-  updatePrizeCounter();
 }
 // Tự động xóa khỏi danh sách
 function removeWinnerFromData(winnerCode) {
@@ -170,7 +152,7 @@ function spin() {
     return;
   }
 
-  let spinTime = 2800000;
+  let spinTime = 3000000;
   let interval = 100;
   let totalInterval = 0;
   result.textContent = "";
@@ -214,8 +196,8 @@ function spin() {
       winSound.play();
       removeWinnerFromData(finalItem[0]);
       saveSpinHistory();
-      spinButton.style.display = "block";
       reSpinButton.style.display = "block";
+      saveButton.style.display = "block";
     } else {
       boxes.forEach((box) => (box.textContent = getRandomDigit()));
       totalInterval += interval;
@@ -238,10 +220,10 @@ spinButton.addEventListener("click", () => {
   nextPrize();
 });
 reSpinButton.addEventListener("click", () => {
+  saveButton.style.display="none";
   reSpinButton.style.display = "none";
   spin();
 });
-updatePrizeCounter();
 
 // Slide
 $(document).ready(function () {
@@ -311,7 +293,6 @@ function saveWinner() {
     name: result.textContent || "Chưa rõ tên",
     prize: prizes[currentPrizeIndex].name,
   };
-
   // Gửi yêu cầu POST tới MockAPI
   fetch(apiUrl, {
     method: "POST",
@@ -339,11 +320,66 @@ function saveWinner() {
     .catch((error) => {
       console.error("Lỗi khi lưu người trúng thưởng:", error);
     });
+}// Hàm để lấy dữ liệu từ API
+async function fetchWinners() {
+  try {
+    const response = await fetch('https://67055d6f031fd46a830faee3.mockapi.io/members'); // URL thực tế của API
+    const data = await response.json();
+
+    // Đối tượng để đếm số lượng giải thưởng
+    const prizeCount = {};
+
+    // Lặp qua tất cả các người chiến thắng và tăng số lượng giải thưởng tương ứng
+    data.forEach(winner => {
+      const prize = winner.prize ? winner.prize.trim() : ''; // Lấy giải thưởng từ từng người chiến thắng
+      if (prize) {
+        prizeCount[prize] = (prizeCount[prize] || 0) + 1; // Tăng số lượng giải thưởng
+      }
+    });
+
+    // Hiển thị kết quả
+    displayPrizeCount(prizeCount);
+  } catch (error) {
+    console.error('Error fetching winners:', error);
+  }
 }
-// Lưu người thắng
-document.getElementById("saveButton").addEventListener("click", () => {
-  saveWinner();
+
+// Hàm để hiển thị số lượng giải thưởng
+function displayPrizeCount(prizeCount) {
+  const prizeCounter = document.getElementById('prizeCounter');
+  prizeCounter.innerHTML = ''; // Xóa nội dung cũ
+
+  for (const [prize, count] of Object.entries(prizeCount)) {
+    const prizeElement = document.createElement('div');
+    prizeElement.textContent = `${prize}: ${count} giải🎊`;
+    prizeCounter.appendChild(prizeElement);
+  }
+}
+
+// Hàm để tự động tải lại dữ liệu từ API theo khoảng thời gian nhất định
+function startPolling() {
+  fetchWinners(); // Gọi hàm để lấy dữ liệu lần đầu tiên
+  setInterval(fetchWinners, 6000); // Thực hiện gọi fetchWinners mỗi 5 giây (5000 ms)
+}
+
+// Lắng nghe sự kiện click trên nút lưu
+saveButton.addEventListener("click", () => {
+  saveWinner(); // Gọi hàm lưu người chiến thắng
+  setTimeout(() => {
+    spinButton.style.display = "block"; // Hiện nút spin sau 1 giây
+  }, 1000);
+  reSpinButton.style.display = "none";
+  saveButton.style.display = "none";
+
+  // Tải lại trang và lấy dữ liệu từ API
+  fetchWinners(); // Gọi hàm để lấy dữ liệu từ API
 });
+
+// Bắt đầu polling khi trang được tải
+window.onload = () => {
+  startPolling(); // Bắt đầu tự động lấy dữ liệu từ API
+};
+
 // Danh sách người thắng
 function showWinnerList() {
   const winnerList = document.getElementById("winnerList");
