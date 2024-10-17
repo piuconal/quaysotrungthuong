@@ -220,7 +220,7 @@ spinButton.addEventListener("click", () => {
   nextPrize();
 });
 reSpinButton.addEventListener("click", () => {
-  saveButton.style.display="none";
+  saveButton.style.display = "none";
   reSpinButton.style.display = "none";
   spin();
 });
@@ -320,18 +320,20 @@ function saveWinner() {
     .catch((error) => {
       console.error("Lỗi khi lưu người trúng thưởng:", error);
     });
-}// Hàm để lấy dữ liệu từ API
+} // Hàm để lấy dữ liệu từ API
 async function fetchWinners() {
   try {
-    const response = await fetch('https://67055d6f031fd46a830faee3.mockapi.io/members'); // URL thực tế của API
+    const response = await fetch(
+      "https://67055d6f031fd46a830faee3.mockapi.io/members"
+    ); // URL thực tế của API
     const data = await response.json();
 
     // Đối tượng để đếm số lượng giải thưởng
     const prizeCount = {};
 
     // Lặp qua tất cả các người chiến thắng và tăng số lượng giải thưởng tương ứng
-    data.forEach(winner => {
-      const prize = winner.prize ? winner.prize.trim() : ''; // Lấy giải thưởng từ từng người chiến thắng
+    data.forEach((winner) => {
+      const prize = winner.prize ? winner.prize.trim() : ""; // Lấy giải thưởng từ từng người chiến thắng
       if (prize) {
         prizeCount[prize] = (prizeCount[prize] || 0) + 1; // Tăng số lượng giải thưởng
       }
@@ -340,17 +342,17 @@ async function fetchWinners() {
     // Hiển thị kết quả
     displayPrizeCount(prizeCount);
   } catch (error) {
-    console.error('Error fetching winners:', error);
+    console.error("Error fetching winners:", error);
   }
 }
 
 // Hàm để hiển thị số lượng giải thưởng
 function displayPrizeCount(prizeCount) {
-  const prizeCounter = document.getElementById('prizeCounter');
-  prizeCounter.innerHTML = ''; // Xóa nội dung cũ
+  const prizeCounter = document.getElementById("prizeCounter");
+  prizeCounter.innerHTML = ""; // Xóa nội dung cũ
 
   for (const [prize, count] of Object.entries(prizeCount)) {
-    const prizeElement = document.createElement('div');
+    const prizeElement = document.createElement("div");
     prizeElement.textContent = `${prize}: ${count} giải🎊`;
     prizeCounter.appendChild(prizeElement);
   }
@@ -641,3 +643,48 @@ document.getElementById("historyButton").addEventListener("click", () => {
   historyListModal.show();
 });
 // end
+
+// // lock
+// $(document).ready(function () {
+//   let idleTime = 0;
+//   const idleLimit = 60; // Giới hạn không tương tác 10 giây
+//   const correctPassword = "686868"; // Đặt mật khẩu chính xác ở đây
+
+//   // Đặt hàm để kiểm tra thời gian không tương tác
+//   function timerIncrement() {
+//     idleTime++;
+//     if (idleTime >= idleLimit) {
+//       $("#loginModal").modal({
+//         backdrop: "static", // Không cho phép đóng modal khi click ra ngoài
+//         keyboard: false, // Không cho phép đóng modal bằng phím ESC
+//       });
+//     }
+//   }
+
+//   // Đặt lại thời gian không tương tác về 0 khi có tương tác
+//   function resetIdleTime() {
+//     idleTime = 0;
+//   }
+
+//   // Bắt sự kiện di chuyển chuột, click, và bàn phím để đặt lại thời gian không tương tác
+//   $(this).mousemove(resetIdleTime);
+//   $(this).keypress(resetIdleTime);
+//   $(this).click(resetIdleTime);
+
+//   // Gọi hàm tăng idleTime mỗi giây
+//   setInterval(timerIncrement, 1000);
+
+//   // Xử lý sự kiện khi người dùng cố gắng đăng nhập
+//   $("#loginForm").submit(function (event) {
+//     event.preventDefault();
+//     const inputPassword = $("#passwordInput").val();
+//     if (inputPassword === correctPassword) {
+//       $("#loginModal").modal("hide"); // Đóng modal nếu mật khẩu đúng
+//       $("#passwordInput").val(""); // Xóa input sau khi đăng nhập thành công
+//       $("#loginError").hide(); // Ẩn thông báo lỗi
+//       idleTime = 0; // Đặt lại thời gian không tương tác
+//     } else {
+//       $("#loginError").show(); // Hiển thị thông báo lỗi nếu mật khẩu sai
+//     }
+//   });
+// });
