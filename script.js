@@ -152,7 +152,7 @@ function spin() {
     return;
   }
 
-  let spinTime = 3000000;
+  let spinTime = 3;
   let interval = 100;
   let totalInterval = 0;
   result.textContent = "";
@@ -479,7 +479,7 @@ async function resetPrizes() {
       console.log(`Thêm prize: ${prize.name} thành công.`);
     }
 
-    await delay(500); // Tạm dừng 500ms giữa các POST request
+    await delay(300); // Tạm dừng 500ms giữa các POST request
   }
 
   console.log("Đã thêm lại dữ liệu mặc định vào prizes.");
@@ -530,7 +530,7 @@ document.getElementById("deleteButton").addEventListener("click", () => {
     // Sau 4 giây, tải lại trang
     setTimeout(() => {
       location.reload();
-    }, 9000);
+    }, 32000);
   }
 });
 
