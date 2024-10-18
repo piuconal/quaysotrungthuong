@@ -420,19 +420,19 @@ document.getElementById("listButton").addEventListener("click", () => {
 const defaultPrizes = [
   {
     name: "BA",
-    count: 7,
+    count: 5,
     spun: 0,
     id: "1",
   },
   {
     name: "NHÌ",
-    count: 5,
+    count: 3,
     spun: 1,
     id: "2",
   },
   {
     name: "NHẤT",
-    count: 3,
+    count: 2,
     spun: 1,
     id: "3",
   },
