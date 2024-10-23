@@ -152,7 +152,8 @@ function spin() {
     return;
   }
 
-  let spinTime = 3000000;
+  // let spinTime = 3000000;
+  let spinTime = 100;
   let interval = 100;
   let totalInterval = 0;
   result.textContent = "";
