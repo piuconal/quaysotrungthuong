@@ -145,6 +145,7 @@ function saveSpinHistory() {
   );
 }
 
+let fixedWinnerSelected = false; // Biến cờ để kiểm tra xem người cố định đã được chọn chưa
 // xử lý quay
 function spin() {
   if (data.length === 0) {
@@ -170,15 +171,31 @@ function spin() {
       clearInterval(spinInterval);
       let finalItem;
 
-      do {
-        finalItem = data[Math.floor(Math.random() * data.length)];
-      } while (spinHistory.includes(finalItem[0]));
+      // do {
+      //   finalItem = data[Math.floor(Math.random() * data.length)];
+      // } while (spinHistory.includes(finalItem[0]));
+
+      //Kiểm tra nếu là giải NHẤT và người cố định chưa được chọn
+      const currentPrize = prizes[currentPrizeIndex];
+      if (currentPrize.name === "NHẤT" && !fixedWinnerSelected) {
+        finalItem = data.find((item) => item[0] === "00000065");
+        if (!finalItem) {
+          console.error("Không tìm thấy người có ID 00000065");
+          return;
+        }
+        fixedWinnerSelected = true; // Đánh dấu đã chọn người cố định
+      } else {
+        // Chọn ngẫu nhiên cho các giải thưởng khác
+        do {
+          finalItem = data[Math.floor(Math.random() * data.length)];
+        } while (spinHistory.includes(finalItem[0]));
+      }
 
       const finalDigits = finalItem[0].split("");
       boxes.forEach((box, index) => (box.textContent = finalDigits[index]));
 
       const resultInfo = finalItem[1].split(",");
-      const currentPrize = prizes[currentPrizeIndex];
+      // const currentPrize = prizes[currentPrizeIndex];
       result.innerHTML = `
         <h1>${resultInfo[0] || "Chưa có thông tin"}</h1>
         <p style="color: red;text-align: center;">GIẢI ${
