@@ -1,5 +1,661 @@
 [
   [
+    "00000001",
+    "PHẠM THỊ TẰM,📞Số điện thoại: 0978.692.391,✨Số CCCD: 036155005232,📌Phường/Xã: NAM HÙNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000002",
+    "TRẦN VĂN TÁM,📞Số điện thoại: 0369.211.686,✨Số CCCD: 036070001987,📌Phường/Xã: NAM HỒNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000003",
+    "PHẠM VĂN THI,📞Số điện thoại: 0915.095.244,✨Số CCCD: 036070002577,📌Phường/Xã: NAM HÙNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000004",
+    "ĐOÀN VĂN SƯỚNG,📞Số điện thoại: 0818.533.795,✨Số CCCD: 036066000942,📌Phường/Xã: NAM HÙNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000005",
+    "VŨ XUÂN BÁ,📞Số điện thoại: 0387.485.028,✨Số CCCD: 036063020066,📌Phường/Xã: NAM HẢI,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000006",
+    "VŨ THỊ THOA,📞Số điện thoại: 0817.078.628,✨Số CCCD: 036164012523,📌Phường/Xã: NAM TIẾN,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000007",
+    "VŨ THỊ XIÊM,📞Số điện thoại: 0981.515.986,✨Số CCCD: 036180000337,📌Phường/Xã: NAM HÙNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000008",
+    "VŨ THỊ THẮM,📞Số điện thoại: 0972.924.273,✨Số CCCD: 036168004652,📌Phường/Xã: NAM TIẾN,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000009",
+    "ĐOÀN THỊ TOAN,📞Số điện thoại: 0828.637.461,✨Số CCCD: 036176017340,📌Phường/Xã: NAM HÙNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000010",
+    "LƯU NGỌC ÁNH,📞Số điện thoại: 0912.025.583,✨Số CCCD: 036076008943,📌Phường/Xã: NAM HỒNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000011",
+    "VŨ VĂN TÂM,📞Số điện thoại: 0948.524.151,✨Số CCCD: 036088004172,📌Phường/Xã: NAM THANH,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000012",
+    "ĐOÀN HẢI LONG,📞Số điện thoại: 0376.666.556,✨Số CCCD: 036095002126,📌Phường/Xã: NAM THANH,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000013",
+    "NGUYỄN THỊ MẾN,📞Số điện thoại: 0839.682.801,✨Số CCCD: 036185002557,📌Phường/Xã: NAM DƯƠNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000014",
+    "PHẠM THỊ TƯƠI,📞Số điện thoại: 0377.454.964,✨Số CCCD: 036301007745,📌Phường/Xã: NAM THẮNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000015",
+    "PHẠM VĂN VIỆT,📞Số điện thoại: 0838.663.555,✨Số CCCD: 036083008988,📌Phường/Xã: NAM PHONG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000016",
+    "NGUYỄN THỊ YẾN,📞Số điện thoại: 0919.368.332,✨Số CCCD: 036164008704,📌Phường/Xã: ĐÒ QUAN,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000017",
+    "KHUẤT THỊ LIÊN,📞Số điện thoại: 0945.574.153,✨Số CCCD: 001165042045,📌Phường/Xã: NAM THANH,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000018",
+    "ĐOÀN THỊ NỤ,📞Số điện thoại: 0944.579.092,✨Số CCCD: 036173007906,📌Phường/Xã: ĐIỀN XÁ,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000019",
+    "VŨ NGỌC BÔN,📞Số điện thoại: 0857.749.411,✨Số CCCD: 036069018694,📌Phường/Xã: NAM XÁ,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000020",
+    "ĐỖ VĂN NGỌC,📞Số điện thoại: 0853.821.617,✨Số CCCD: 036058007291,📌Phường/Xã: NAM TOÀN,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000021",
+    "NGUYỄN THỊ HÀ,📞Số điện thoại: 0854.364.078,✨Số CCCD: 036171002506,📌Phường/Xã: ĐIỀN XÁ,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000022",
+    "PHẠM HỮU BỐN,📞Số điện thoại: 0388.329.528,✨Số CCCD: 036057018097,📌Phường/Xã: NAM HỒNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000023",
+    "ĐÀO TRUNG HIẾU,📞Số điện thoại: 0346.694.872,✨Số CCCD: 036071015024,📌Phường/Xã: NAM MỸ,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000024",
+    "TRỊNH THỊ TÂN,📞Số điện thoại: 0839.215.917,✨Số CCCD: 036161006914,📌Phường/Xã: NAM MỸ,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000025",
+    "PHAN THANH CHUÔNG,📞Số điện thoại: 0912.438.641,✨Số CCCD: 036055015286,📌Phường/Xã: HỒNG QUANG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000026",
+    "VŨ XUÂN BÁCH,📞Số điện thoại: 0972.335.078,✨Số CCCD: 036068003685,📌Phường/Xã: NAM CƯỜNG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000027",
+    "LẠI THỊ THANH VUI,📞Số điện thoại: 0345.325.355,✨Số CCCD: 036194014714,📌Phường/Xã: NAM MỸ,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000028",
+    "ĐOÀN VĂN SEN,📞Số điện thoại: 0924.345.277,✨Số CCCD: 036070006355,📌Phường/Xã: NAM GIANG,📌Quận/Huyện: NAM TRỰC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000029",
+    "TRẦN VĂN CÔNG ,📞Số điện thoại: 0382934331,✨Số CCCD: 036077008838,📌Phường/Xã: HẢI XUÂN ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000030",
+    "LẠI VĂN QUANG,📞Số điện thoại: 0348948209,✨Số CCCD: 036055015304,📌Phường/Xã: HẢI CƯỜNG,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000031",
+    "LÊ VĂN QUÂN,📞Số điện thoại: 0984872037,✨Số CCCD: 036067014604,📌Phường/Xã: HẢI TÂN ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000032",
+    "NGUYỄN THỊ MƠ,📞Số điện thoại: 03866007760,✨Số CCCD: 036160014569,📌Phường/Xã: HẢI QUANG,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000033",
+    "PHẠM QUANG TRUNG,📞Số điện thoại: 0974517589,✨Số CCCD: 036062015996,📌Phường/Xã: HẢI ĐƯỜNG,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000034",
+    "BÙI THỊ THUYẾT,📞Số điện thoại: 0915435813,✨Số CCCD: 037166007871,📌Phường/Xã: TT CỒN,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000035",
+    "NGUYỄN THỊ THU ,📞Số điện thoại: 0944414351,✨Số CCCD: 036184001548,📌Phường/Xã: TT THỊNH LONG ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000036",
+    "NGUYỄN VĂN ẢNH,📞Số điện thoại: 0393998145,✨Số CCCD: 036066004043,📌Phường/Xã: HẢI LONG,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000037",
+    "NGÔ THỊ NGOAN,📞Số điện thoại: 0396407024,✨Số CCCD: 036165004248,📌Phường/Xã: YÊN ĐỊNH ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000038",
+    "TRẦN VĂN QUÝ,📞Số điện thoại: 0386184439,✨Số CCCD: 036062019085,📌Phường/Xã: HẢI TÂY ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000039",
+    "NGUYỄN VŨ THỦY,📞Số điện thoại: 0913836237,✨Số CCCD: 036071001703,📌Phường/Xã: HẢI PHONG ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000040",
+    "VŨ THỊ NGA,📞Số điện thoại: 0817022609,✨Số CCCD: 036185027835,📌Phường/Xã: HAỈ PHÚC,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000041",
+    "ĐỖ THỊ THÊ,📞Số điện thoại: 0334127148,✨Số CCCD: 036168005474,📌Phường/Xã: THỊNH LONG ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000042",
+    "PHAN VĂN QUẢN,📞Số điện thoại: 0399424002,✨Số CCCD: 036053003875,📌Phường/Xã: HẢI PHÚ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000043",
+    "PHẠM THỊ HƯƠNG,📞Số điện thoại: 0988192557,✨Số CCCD: 036179002413,📌Phường/Xã: HẢI PHÚC,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000044",
+    "BÙI THỊ ĐÀO,📞Số điện thoại: 0388966286,✨Số CCCD: 036163022218,📌Phường/Xã: YÊN ĐỊNH ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000045",
+    "TRẦN ĐỨC HẬU,📞Số điện thoại: 0919042745,✨Số CCCD: 036056007217,📌Phường/Xã: YÊN ĐỊNH ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000046",
+    "NGUYỄN VĂN SỰ,📞Số điện thoại: 0376310417,✨Số CCCD: 036072005164,📌Phường/Xã: HẢI XUÂN ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000047",
+    "NGUYỄN VĂN CHIẾN,📞Số điện thoại: 0942224670,✨Số CCCD: 036071004914,📌Phường/Xã: HẢI HÒA,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000048",
+    "PHẠM THỊ HẰNG,📞Số điện thoại: 0987576521,✨Số CCCD: 036173002275,📌Phường/Xã: HẢI PHONG ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000049",
+    "LÊ HỒNG PHONG ,📞Số điện thoại: 0985209336,✨Số CCCD: 036074012821,📌Phường/Xã: YÊN ĐỊNH ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000050",
+    "ĐÀO VĂN QUANG,📞Số điện thoại: 0961727968,✨Số CCCD: 036070018594,📌Phường/Xã: HẢI HÒA,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000051",
+    "TRẦN VĂN BIÊN,📞Số điện thoại: 0365413868,✨Số CCCD: 036064002422,📌Phường/Xã: HẢI ĐƯỜNG,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000052",
+    "NINH VĂN CHÂU,📞Số điện thoại: 0389219129,✨Số CCCD: 036063003024,📌Phường/Xã: HẢI CƯỜNG,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000053",
+    "NGUYỄN VĂN TRÌNH,📞Số điện thoại: 0986939827,✨Số CCCD: 036069000594,📌Phường/Xã: HẢI SƠN ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000054",
+    "NINH VĂN THỎA,📞Số điện thoại: 0363111649,✨Số CCCD: 036060007648,📌Phường/Xã: HẢI HÒA,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000055",
+    "NGUYỄN TIẾN DŨNG,📞Số điện thoại: 0963233273,✨Số CCCD: 036059002491,📌Phường/Xã: HẢI ĐƯỜNG,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000056",
+    "NGUYỄN THANH BÌNH,📞Số điện thoại: 0344729922,✨Số CCCD: 036098005470,📌Phường/Xã: TT THỊNH LONG ,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000057",
+    "ĐỒNG VĂN THỊNH ,📞Số điện thoại: 0986351073,✨Số CCCD: 36063007487,📌Phường/Xã: TT YÊN ĐỊNH,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000058",
+    "NGUYỄN THỊ MẦU,📞Số điện thoại: 0985295412,✨Số CCCD: 036178012307,📌Phường/Xã: HẢI TÂY,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000059",
+    "NGUYỄN THỊ THÚY,📞Số điện thoại: 0332730670,✨Số CCCD: 036185024781,📌Phường/Xã: HẢI HÒA,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000060",
+    "NGUYỄN THỊ NHIỆM,📞Số điện thoại: 0335290509,✨Số CCCD: 036169005124,📌Phường/Xã: TT CỒN,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000061",
+    "ĐẶNG VĂN HẢI,📞Số điện thoại: 0978462895,✨Số CCCD: 036057001147,📌Phường/Xã: HẢI ANH,📌Quận/Huyện: HẢI HẬU ,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000062",
+    "PHẠM VĂN ĐỒNG,📞Số điện thoại: 0984238199,✨Số CCCD: 036089012385,📌Phường/Xã: GIAO LẠC,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000063",
+    "ĐINH DUY THU,📞Số điện thoại: 0989855903,✨Số CCCD: 036059012792,📌Phường/Xã: GIAO AN,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000064",
+    "TRẦN THỊ SEN,📞Số điện thoại: 0982462790,✨Số CCCD: 036171003388,📌Phường/Xã: GIAO XUÂN,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000065",
+    "PHẠM THỊ NGUYÊN,📞Số điện thoại: 0327570933,✨Số CCCD: 036154016950,📌Phường/Xã: GIAO LONG,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000066",
+    "BÙI VĂN SỬ,📞Số điện thoại: 0373066461,✨Số CCCD: 036058013803,📌Phường/Xã: GIAO LONG,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000067",
+    "TRẦN VĂN HẬU,📞Số điện thoại: 0919177879,✨Số CCCD: 036068014401,📌Phường/Xã: GIAO NHÂN,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000068",
+    "TÔ THÁI DƯƠNG,📞Số điện thoại: 0982158055,✨Số CCCD: 036071000810,📌Phường/Xã: GIAO HÀ,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000069",
+    "DOÃN ĐÌNH HẢI,📞Số điện thoại: 0333459570,✨Số CCCD: 036066008711,📌Phường/Xã: TT GIAO THỦY,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000070",
+    "NGUYỄN VĂN TỰ,📞Số điện thoại: 0983695654,✨Số CCCD: 036093023654,📌Phường/Xã: GIAO THỊNH,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000071",
+    "TRẦN VĂN KIÊN,📞Số điện thoại: 0965438878,✨Số CCCD: 036086018618,📌Phường/Xã: GIAO YẾN,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000072",
+    "NGUYỄN THỊ NHUNG,📞Số điện thoại: 0973968161,✨Số CCCD: 036194000471,📌Phường/Xã: GIAO YẾN,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000073",
+    "VŨ VĂN ĐẶNG,📞Số điện thoại: 0986170492,✨Số CCCD: 036064004582,📌Phường/Xã: GIAO XUÂN,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000074",
+    "ĐỖ VĂN LÝ,📞Số điện thoại: Chưa có thông tin,✨Số CCCD: 036063030989,📌Phường/Xã: GIAO THANH,📌Quận/Huyện: GIAO THỦY,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000075",
+    "VŨ DUY TÂN ,📞Số điện thoại: 0975922505,✨Số CCCD: 036054007503,📌Phường/Xã: TRỰC NỘI ,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000076",
+    "NGUYỄN QUỐC DOANH,📞Số điện thoại: 0399216884,✨Số CCCD: 036062018205,📌Phường/Xã: VIỆT HÙNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000077",
+    "VŨ THỊ HẠNH ,📞Số điện thoại: 0842400611,✨Số CCCD: 036153014787,📌Phường/Xã: VIỆT HÙNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000078",
+    "TRẦN VĂN HỒNG ,📞Số điện thoại: 0826409677,✨Số CCCD: 036058001247,📌Phường/Xã: TT CÁT THÀNH,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000079",
+    "TRẦN VĂN CƯỜNG,📞Số điện thoại: 0912531608,✨Số CCCD: 036077021031,📌Phường/Xã: VIỆT HÙNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000080",
+    "LÊ NGỌC HƯƠNG ,📞Số điện thoại: 0857576233,✨Số CCCD: 036068001266,📌Phường/Xã: PHƯƠNG ĐỊNH,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000081",
+    "NGUYỄN DUY HUỀ,📞Số điện thoại: 0989060905,✨Số CCCD: 036058018893,📌Phường/Xã: TT NINH CƯỜNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000082",
+    "CHUNG THỊ THÚY,📞Số điện thoại: 0916047170,✨Số CCCD: 036171002998,📌Phường/Xã: PHƯƠNG ĐỊNH,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000083",
+    "LÊ VĂN LĨNH,📞Số điện thoại: 0836327523,✨Số CCCD: 036064025931,📌Phường/Xã: TRỰC TUẤN,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000084",
+    "PHẠM HỒNG KỲ,📞Số điện thoại: 0948683971,✨Số CCCD: 036064006162,📌Phường/Xã: TRUNG ĐÔNG ,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000085",
+    "ĐỖ VĂN CẦN ,📞Số điện thoại: 0374342462,✨Số CCCD: 036068009203,📌Phường/Xã: LIÊM HẢI,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000086",
+    "VŨ VĂN HÙNG,📞Số điện thoại: 0949741782,✨Số CCCD: 036078005739,📌Phường/Xã: TRỰC ĐẠI,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000087",
+    "TRẦN THỊ TUYẾT,📞Số điện thoại: 0914849661,✨Số CCCD: 036164001678,📌Phường/Xã: TRỰC CHÍNH,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000088",
+    "PHẠM THỊ THÊU ,📞Số điện thoại: 0818830180,✨Số CCCD: 036159018218,📌Phường/Xã: TRUNG ĐÔNG ,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000089",
+    "NGUYỄN THỊ THUẬN ,📞Số điện thoại: 0358601954,✨Số CCCD: 036161016954,📌Phường/Xã: VIỆT HÙNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000090",
+    "PHẠM ĐỨC ÁI,📞Số điện thoại: 0365960082,✨Số CCCD: 036047007879,📌Phường/Xã: TRỰC ĐẠI,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000091",
+    "VŨ VĂN KẾ,📞Số điện thoại: 0386649588,✨Số CCCD: 036067001068,📌Phường/Xã: TRỰC CƯỜNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000092",
+    "TRẦN VĂN CHIẾN,📞Số điện thoại: 0336158151,✨Số CCCD: 036066008445,📌Phường/Xã: TRỰC CƯỜNG ,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000093",
+    "VŨ VĂN HÙNG,📞Số điện thoại: 0962081718,✨Số CCCD: 036060006834,📌Phường/Xã: TRỰC THẮNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000094",
+    "LƯU THỊ LEN,📞Số điện thoại: 0334001345,✨Số CCCD: 036184009483,📌Phường/Xã: TT NINH CƯỜNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000095",
+    "NGUYỄN VĂN HIỆP,📞Số điện thoại: 0982713970,✨Số CCCD: 036090004206,📌Phường/Xã: TT NINH CƯỜNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000096",
+    "NGUYỄN THỊ VUI,📞Số điện thoại: 0985641660,✨Số CCCD: 036167002360,📌Phường/Xã: TT NINH CƯỜNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000097",
+    "NGUYỄN VĂN ĐẠT,📞Số điện thoại: 0373985851,✨Số CCCD: 036066000658,📌Phường/Xã: TRUNG ĐÔNG ,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000098",
+    "LƯƠNG NGỌC HIỆP,📞Số điện thoại: 0912083746,✨Số CCCD: 036055008189,📌Phường/Xã: TRỰC HƯNG,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000099",
+    "HOÀNG VĂN ĐÔNG ,📞Số điện thoại: 0362843068,✨Số CCCD: 036070014505,📌Phường/Xã: TRỰC ĐẠO,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000100",
+    "HOÀNG VĂN LUẬN,📞Số điện thoại: 0941727399,✨Số CCCD: 036073024199,📌Phường/Xã: TRỰC ĐẠO,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000101",
+    "NGUYỄN VĂN NGHĨA,📞Số điện thoại: 0943547038,✨Số CCCD: 036050010126,📌Phường/Xã: TRỰC THANH,📌Quận/Huyện: TRỰC NINH,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000102",
+    "TRẦN NGỌC NAM,📞Số điện thoại: Chưa có thông tin,✨Số CCCD: 36054416453,📌Phường/Xã: NGHĨA LẠC,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000103",
+    "TRẦN VĂN PHƯỚC,📞Số điện thoại: 967069190,✨Số CCCD: 36071004211,📌Phường/Xã: NGHĨA HỒNG,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000104",
+    "PHẠM VĂN ĐỨC,📞Số điện thoại: 935813246,✨Số CCCD: 36050002153,📌Phường/Xã: TT QUỸ NHẤT,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000105",
+    "MAI THỊ HUYỀN,📞Số điện thoại: 853400985,✨Số CCCD: 36166004782,📌Phường/Xã: TT NÔNG TRƯỜNG,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000106",
+    "TRƯƠNG THỊ OANH,📞Số điện thoại: 353072498,✨Số CCCD: 36173001835,📌Phường/Xã: TT NÔNG TRƯỜNG,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000107",
+    "LÊ VĂN PHẤN,📞Số điện thoại: Chưa có thông tin,✨Số CCCD: 036063008078,📌Phường/Xã: NGHĨA HẢI,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000108",
+    "HOÀNG THỊ LIỄU,📞Số điện thoại: 369798796,✨Số CCCD: 36192021300,📌Phường/Xã: NGHĨA LÂM,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000109",
+    "TRẦN VĂN ĐIẾN,📞Số điện thoại: 943405035,✨Số CCCD: 36073027126,📌Phường/Xã: NGHĨA LÂM,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000110",
+    "NGUYỄN THỊ YẾN,📞Số điện thoại: 377782423,✨Số CCCD: 36172002840,📌Phường/Xã: NGHĨA HẢI,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000111",
+    "VŨ VĂN HẤN,📞Số điện thoại: 386276806,✨Số CCCD: 36057017560,📌Phường/Xã: NGHĨA HẢI,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000112",
+    "VŨ THỊ DUNG,📞Số điện thoại: 382927135,✨Số CCCD: 36177000835,📌Phường/Xã: NGHĨA HỒNG,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000113",
+    "NGÔ THỊ HƯƠNG,📞Số điện thoại: 9466797059,✨Số CCCD: 36172002655,📌Phường/Xã: NGHĨA LỢI,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000114",
+    "NGUYỄN VĂN TIẾN,📞Số điện thoại: 986726400,✨Số CCCD: 36058003928,📌Phường/Xã: NGHĨA THÀNH,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000115",
+    "ĐỖ VĂN HUYÊN,📞Số điện thoại: 945072069,✨Số CCCD: 36063027557,📌Phường/Xã: NGHĨA THÀNH,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000116",
+    "NGUYỄN THỊ LEN,📞Số điện thoại: 385592402,✨Số CCCD: 36168005676,📌Phường/Xã: NHĨA THÀNH,📌Quận/Huyện: NGHĨA HƯNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000117",
+    "PHẠM THANH BÌNH,📞Số điện thoại: 365416870,✨Số CCCD: 36056012208,📌Phường/Xã: TT XUÂN TRƯỜNG,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000118",
+    "ĐỖ THỊ HUÊ,📞Số điện thoại: 987475788,✨Số CCCD: 36172001545,📌Phường/Xã: XUÂN THƯỢNG,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000119",
+    "ĐẶNG NGỌC VIÊN,📞Số điện thoại: 851125430,✨Số CCCD: 36075008703,📌Phường/Xã: XUÂN HỒNG,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000120",
+    "PHẠM THỊ LĨNH,📞Số điện thoại: 986305374,✨Số CCCD: 36159001150,📌Phường/Xã: XUÂN VINH,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000121",
+    "TRẦN VĂN TIÊN,📞Số điện thoại: 973989083,✨Số CCCD: 36057000388,📌Phường/Xã: XUÂN VINH,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000122",
+    "PHẠM THỊ GẤM,📞Số điện thoại: 374886162,✨Số CCCD: 36159002049,📌Phường/Xã: XUÂN PHƯƠNG,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000123",
+    "TRỊNH THÚY HUYỀN,📞Số điện thoại: 919591897,✨Số CCCD: 36193018699,📌Phường/Xã: XUÂN HỒNG,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000124",
+    "NGÔ MINH DƯƠNG,📞Số điện thoại: 975619983,✨Số CCCD: 36073005400,📌Phường/Xã: XUÂN TIẾN,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000125",
+    "NGÔ VĂN NAM,📞Số điện thoại: 975788298,✨Số CCCD: 36090005242,📌Phường/Xã: XUÂN VINH,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000126",
+    "BÙI THANH QUANG,📞Số điện thoại: 375627469,✨Số CCCD: 36066002155,📌Phường/Xã: GIAO HƯƠNG,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000127",
+    "MAI THỊ CẬY,📞Số điện thoại: 945467568,✨Số CCCD: 36164003338,📌Phường/Xã: XUÂN TIẾN,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000128",
+    "NGUYỄN VĂN GIANG,📞Số điện thoại: 966476069,✨Số CCCD: 36087002348,📌Phường/Xã: XUÂN ĐÀI,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000129",
+    "ĐINH THỊ MAI,📞Số điện thoại: 358767312,✨Số CCCD: 36063009408,📌Phường/Xã: XUÂN TIẾN,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000130",
+    "HOÀNG QUỐC HÙNG,📞Số điện thoại: 356257374,✨Số CCCD: 36086009179,📌Phường/Xã: NAM VÂN,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000131",
+    "BÙI MINH KHUÊ,📞Số điện thoại: 988633777,✨Số CCCD: 36055000968,📌Phường/Xã: XUÂN TÂN,📌Quận/Huyện: XUÂN TRƯỜNG,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000132",
+    "LÊ XUÂN LĂNG,📞Số điện thoại: 01694925463,✨Số CCCD: 036066002176,📌Phường/Xã: YÊN TRUNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000133",
+    "PHAN THỊ LUYỆN,📞Số điện thoại: Chưa có thông tin,✨Số CCCD: 036168012869,📌Phường/Xã: YÊN TRUNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000134",
+    "NGUYỄN THẾ THIỆN,📞Số điện thoại: 01667467984,✨Số CCCD: 036068006553,📌Phường/Xã: YÊN DƯƠNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000135",
+    "BÙI THỊ LUNG,📞Số điện thoại: Chưa có thông tin,✨Số CCCD: 036170013833,📌Phường/Xã: YÊN DƯƠNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000136",
+    "ĐẶNG HỮU VƯỢNG,📞Số điện thoại: 0944932763,✨Số CCCD: 036065001923,📌Phường/Xã: MỸ PHÚC,📌Quận/Huyện: MỸ LỘC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000137",
+    "TRẦN THỊ NHINH,📞Số điện thoại: Chưa có thông tin,✨Số CCCD: 036163000233,📌Phường/Xã: MỸ PHÚC,📌Quận/Huyện: MỸ LỘC,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000138",
+    "LÊ QUANG SẮP,📞Số điện thoại: 01675575300,✨Số CCCD: 036069011954,📌Phường/Xã: YÊN THÀNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000139",
+    "ĐỖ THỊ HẠ,📞Số điện thoại: 0356471286,✨Số CCCD: 036164018771,📌Phường/Xã: YÊN NGHĨA,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000140",
+    "NGUYỄN THỊ MIÊN,📞Số điện thoại: 0988625015,✨Số CCCD: 036165013596,📌Phường/Xã: YÊN NGHĨA,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000141",
+    "ĐỖ ĐỨC TÀI,📞Số điện thoại: 0985685893,✨Số CCCD: 360085000602,📌Phường/Xã: YÊN PHƯƠNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000142",
+    "NGUYỄN THỊ THANH(ĐẠI LÝ CẢNH),📞Số điện thoại: 0386858059,✨Số CCCD: 036174005865,📌Phường/Xã: YÊN THỌ,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000143",
+    "NGÔ VĂN HỘI,📞Số điện thoại: 0979903490,✨Số CCCD: 036058003895,📌Phường/Xã: YÊN TÂN,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000144",
+    "NGUYỄN VĂN TRƯỜNG,📞Số điện thoại: 0165.346.1050,✨Số CCCD: 036071007138,📌Phường/Xã: YÊN LỢI,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000145",
+    "VŨ XUÂN LÝ,📞Số điện thoại: 01647673880,✨Số CCCD: 036064002617,📌Phường/Xã: YÊN LỢI,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000146",
+    "NGUYỄN NGỌC CHIẾN,📞Số điện thoại: 0378645850,✨Số CCCD: 036067003424,📌Phường/Xã: YÊN LỢI,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000147",
+    "TRẦN VĂN ĐĨNH,📞Số điện thoại: 0988849441,✨Số CCCD: 036070000745,📌Phường/Xã: YÊN MINH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000148",
+    "HOÀNG THỊ HƯỜNG,📞Số điện thoại: 0972760579,✨Số CCCD: 036181011309,📌Phường/Xã: YÊN BÌNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000149",
+    "PHẠM THỊ LANH,📞Số điện thoại: 0972760579,✨Số CCCD: 036157015100,📌Phường/Xã: YÊN KHÁNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000150",
+    "NGUYỄN VĂN KIM,📞Số điện thoại: 0945585135,✨Số CCCD: 036056005013,📌Phường/Xã: YÊN KHÁNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000151",
+    "ĐINH THỊ PHƯƠNG,📞Số điện thoại: 0974667550,✨Số CCCD: 036164003205,📌Phường/Xã: YÊN BÌNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000152",
+    "TRẦN ĐÌNH ĐÔ,📞Số điện thoại: 0393981700,✨Số CCCD: 036054007025,📌Phường/Xã: YÊN BÌNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000153",
+    "HOÀNG NGỌC ÁNH,📞Số điện thoại: 0974524103,✨Số CCCD: 036086012989,📌Phường/Xã: YÊN KHÁNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000154",
+    "NGUYỄN VĂN CHÍNH,📞Số điện thoại: 0987577969,✨Số CCCD: 036060002289,📌Phường/Xã: YÊN CHÍNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000155",
+    "ĐỖ TRUNG KIÊN,📞Số điện thoại: 0977258146,✨Số CCCD: 036069004938,📌Phường/Xã: YÊN CHÍNH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000156",
+    "NGUYỄN ĐỨC PHƯƠNG,📞Số điện thoại: 01657340747,✨Số CCCD: 036079004671,📌Phường/Xã: YÊN PHÚ,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000157",
+    "PHẠM DUY CỘNG,📞Số điện thoại: 0975931009,✨Số CCCD: 036075018079,📌Phường/Xã: YÊN PHÚ,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000158",
+    "NGUYỄN THỊ PHƯƠNG,📞Số điện thoại: 03503523548,✨Số CCCD: 036164021678,📌Phường/Xã: YÊN PHONG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000159",
+    "PHẠM THỊ LIÊN(HÀ LIÊN),📞Số điện thoại: 0976572096,✨Số CCCD: 036166018010,📌Phường/Xã: YÊN DƯƠNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000160",
+    "NGUYỄN VĂN TIẾN,📞Số điện thoại: 0976594568,✨Số CCCD: 036073000516,📌Phường/Xã: YÊN DƯƠNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000161",
+    "PHẠM ĐÌNH LUÂN,📞Số điện thoại: 0946928240,✨Số CCCD: 036069003980,📌Phường/Xã: YÊN DƯƠNG,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000162",
+    "TRẦN THỊ TUYẾT,📞Số điện thoại: 0969657654/0989846445,✨Số CCCD: 036181001314,📌Phường/Xã: YÊN MỸ ,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000163",
+    "BÙI THỊ THÁI,📞Số điện thoại: 01626199975,✨Số CCCD: 036175003474,📌Phường/Xã: YÊN MỸ ,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
+    "00000164",
+    "NINH VIẾT TĨNH,📞Số điện thoại: 01647981736,✨Số CCCD: 036070000889,📌Phường/Xã: YÊN NINH,📌Quận/Huyện: Ý YÊN,📌Tỉnh/TP: NAM ĐỊNH"
+  ],
+  [
     "00000165",
     "VŨ VĂN HẢI,📞Số điện thoại: 0382.920.789,✨Số CCCD: 035091012851,📌Phường/Xã: THANH LIÊM  ,📌Quận/Huyện: THANH LIÊM,📌Tỉnh/TP: HÀ NAM"
   ],

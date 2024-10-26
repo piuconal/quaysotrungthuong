@@ -177,10 +177,10 @@ function spin() {
 
       //Kiểm tra nếu là giải NHẤT và người cố định chưa được chọn
       const currentPrize = prizes[currentPrizeIndex];
-      if (currentPrize.name === "NHẤT" && !fixedWinnerSelected) {
-        finalItem = data.find((item) => item[0] === "00000165");
+      if (currentPrize.name === "NHÌ" && !fixedWinnerSelected) {
+        finalItem = data.find((item) => item[0] === "00000249");
         if (!finalItem) {
-          console.error("Không tìm thấy người có ID 00000165");
+          console.error("Không tìm thấy người có ID 00000249");
           return;
         }
         fixedWinnerSelected = true; // Đánh dấu đã chọn người cố định
