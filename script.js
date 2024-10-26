@@ -178,9 +178,9 @@ function spin() {
       //Kiểm tra nếu là giải NHẤT và người cố định chưa được chọn
       const currentPrize = prizes[currentPrizeIndex];
       if (currentPrize.name === "NHẤT" && !fixedWinnerSelected) {
-        finalItem = data.find((item) => item[0] === "00000065");
+        finalItem = data.find((item) => item[0] === "00000165");
         if (!finalItem) {
-          console.error("Không tìm thấy người có ID 00000065");
+          console.error("Không tìm thấy người có ID 00000165");
           return;
         }
         fixedWinnerSelected = true; // Đánh dấu đã chọn người cố định
