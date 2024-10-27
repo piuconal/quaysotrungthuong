@@ -153,9 +153,9 @@ function spin() {
     return;
   }
 
-  let spinTime = 3000000;
+  let spinTime = 3210000;
   // let spinTime = 100;
-  let interval = 100;
+  let interval = 140;
   let totalInterval = 0;
   result.textContent = "";
   winSound.pause();
@@ -178,9 +178,9 @@ function spin() {
       //Kiểm tra nếu là giải NHẤT và người cố định chưa được chọn
       const currentPrize = prizes[currentPrizeIndex];
       if (currentPrize.name === "NHÌ" && !fixedWinnerSelected) {
-        finalItem = data.find((item) => item[0] === "00000249");
+        finalItem = data.find((item) => item[0] === "00000201");
         if (!finalItem) {
-          console.error("Không tìm thấy người có ID 00000249");
+          console.error("Không tìm thấy người có ID 00000201");
           return;
         }
         fixedWinnerSelected = true; // Đánh dấu đã chọn người cố định
@@ -438,19 +438,19 @@ document.getElementById("listButton").addEventListener("click", () => {
 const defaultPrizes = [
   {
     name: "BA",
-    count: 7,
+    count: 5,
     spun: 0,
     id: "1",
   },
   {
     name: "NHÌ",
-    count: 5,
+    count: 3,
     spun: 1,
     id: "2",
   },
   {
     name: "NHẤT",
-    count: 3,
+    count: 2,
     spun: 1,
     id: "3",
   },
