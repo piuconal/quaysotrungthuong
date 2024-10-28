@@ -156,7 +156,7 @@ function spin() {
     return;
   }
 
-  let spinTime = 100;
+  let spinTime = 32110000;
   // let spinTime = 100;
   let interval = 140;
   let totalInterval = 0;
