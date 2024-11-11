@@ -149,6 +149,21 @@ let fixedWinnerSelected = false; // Biến cờ để kiểm tra xem người c�
 let firstPrizeFixedWinnerSelected = false; // Biến cờ để kiểm tra xem người cố định đã được chọn chưa
 let secondPrizeFixedWinnerSelected = false; // Biến cờ để kiểm tra xem người cố định đã được chọn chưa
 let thirdPrizeFixedWinnerSelected = false; // Biến cờ để kiểm tra xem người cố định đã được chọn chưa
+
+const fixedWinners = {
+  "ĐẶC BIỆT": ["00000104"],
+  NHẤT: ["00000278", "00000117", "00000188"],
+  NHÌ: ["00000182", "00000151", "00000021", "00000045", "00000217"],
+  BA: ["00000191"],
+};
+
+// Define selected winners for tracking
+const selectedFixedWinners = {
+  "ĐẶC BIỆT": [],
+  NHẤT: [],
+  NHÌ: [],
+  BA: [],
+};
 // xử lý quay
 function spin() {
   if (data.length === 0) {
@@ -156,7 +171,7 @@ function spin() {
     return;
   }
 
-  let spinTime = 32110000;
+  let spinTime = 10000000;
   // let spinTime = 100;
   let interval = 140;
   let totalInterval = 0;
@@ -179,49 +194,78 @@ function spin() {
       // } while (spinHistory.includes(finalItem[0]));
 
       // Kiểm tra nếu là giải NHẤT và người cố định chưa được chọn
-      const currentPrize = prizes[currentPrizeIndex];
-      if (currentPrize.name === "ĐẶC BIỆT" && !fixedWinnerSelected) {
-        // Giải đặc biệt có ID người cố định là "00000010"
-        finalItem = data.find((item) => item[0] === "00000010");
-        if (!finalItem) {
+      // const currentPrize = prizes[currentPrizeIndex];
+      // if (currentPrize.name === "ĐẶC BIỆT" && !fixedWinnerSelected) {
+      //   // Giải đặc biệt có ID người cố định là "00000010"
+      //   finalItem = data.find((item) => item[0] === "00000010");
+      //   if (!finalItem) {
+      //     console.error(
+      //       "Không tìm thấy người có ID 00000010 cho giải ĐẶC BIỆT"
+      //     );
+      //     return;
+      //   }
+      //   fixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải đặc biệt
+      // } else if (
+      //   currentPrize.name === "NHẤT" &&
+      //   !firstPrizeFixedWinnerSelected
+      // ) {
+      //   // Giải nhất có ID người cố định là "00000020"
+      //   finalItem = data.find((item) => item[0] === "00000040");
+      //   if (!finalItem) {
+      //     console.error("Không tìm thấy người có ID 00000040 cho giải NHẤT");
+      //     return;
+      //   }
+      //   firstPrizeFixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải nhất
+      // } else if (
+      //   currentPrize.name === "NHÌ" &&
+      //   !secondPrizeFixedWinnerSelected
+      // ) {
+      //   // Giải nhì có ID người cố định là "00000030"
+      //   finalItem = data.find((item) => item[0] === "00000093");
+      //   if (!finalItem) {
+      //     console.error("Không tìm thấy người có ID 00000093 cho giải NHÌ");
+      //     return;
+      //   }
+      //   secondPrizeFixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải nhì
+      // } else if (currentPrize.name === "BA" && !thirdPrizeFixedWinnerSelected) {
+      //   // Giải nhất có ID người cố định là "00000020"
+      //   finalItem = data.find((item) => item[0] === "00000179");
+      //   if (!finalItem) {
+      //     console.error("Không tìm thấy người có ID 00000179 cho giải NHẤT");
+      //     return;
+      //   }
+      //   thirdPrizeFixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải nhất
+      // } else {
+      //   // Chọn ngẫu nhiên cho các giải thưởng còn lại nếu không có yêu cầu người cố định
+      //   do {
+      //     finalItem = data[Math.floor(Math.random() * data.length)];
+      //   } while (spinHistory.includes(finalItem[0]));
+      // }
+
+      const currentPrize = prizes[currentPrizeIndex].name;
+
+      // Check if there are fixed winners for the current prize
+      const fixedWinnerIds = fixedWinners[currentPrize] || [];
+      const selectedFixedIds = selectedFixedWinners[currentPrize] || [];
+
+      // Choose from fixed winners if available, otherwise random
+      if (fixedWinnerIds.length > selectedFixedIds.length) {
+        // Find the next available fixed winner that hasn't been selected
+        const nextFixedWinner = fixedWinnerIds.find(
+          (id) => !selectedFixedIds.includes(id)
+        );
+        finalItem = data.find((item) => item[0] === nextFixedWinner);
+
+        if (finalItem) {
+          selectedFixedWinners[currentPrize].push(nextFixedWinner); // Track selected winner
+        } else {
           console.error(
-            "Không tìm thấy người có ID 00000010 cho giải ĐẶC BIỆT"
+            `Không tìm thấy người có ID ${nextFixedWinner} cho giải ${currentPrize}`
           );
           return;
         }
-        fixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải đặc biệt
-      } else if (
-        currentPrize.name === "NHẤT" &&
-        !firstPrizeFixedWinnerSelected
-      ) {
-        // Giải nhất có ID người cố định là "00000020"
-        finalItem = data.find((item) => item[0] === "00000040");
-        if (!finalItem) {
-          console.error("Không tìm thấy người có ID 00000040 cho giải NHẤT");
-          return;
-        }
-        firstPrizeFixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải nhất
-      } else if (
-        currentPrize.name === "NHÌ" &&
-        !secondPrizeFixedWinnerSelected
-      ) {
-        // Giải nhì có ID người cố định là "00000030"
-        finalItem = data.find((item) => item[0] === "00000093");
-        if (!finalItem) {
-          console.error("Không tìm thấy người có ID 00000093 cho giải NHÌ");
-          return;
-        }
-        secondPrizeFixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải nhì
-      } else if (currentPrize.name === "BA" && !thirdPrizeFixedWinnerSelected) {
-        // Giải nhất có ID người cố định là "00000020"
-        finalItem = data.find((item) => item[0] === "00000179");
-        if (!finalItem) {
-          console.error("Không tìm thấy người có ID 00000179 cho giải NHẤT");
-          return;
-        }
-        thirdPrizeFixedWinnerSelected = true; // Đánh dấu đã chọn người cố định cho giải nhất
       } else {
-        // Chọn ngẫu nhiên cho các giải thưởng còn lại nếu không có yêu cầu người cố định
+        // No more fixed winners, pick a random winner
         do {
           finalItem = data[Math.floor(Math.random() * data.length)];
         } while (spinHistory.includes(finalItem[0]));
@@ -235,7 +279,7 @@ function spin() {
       result.innerHTML = `
         <h1>${resultInfo[0] || "Chưa có thông tin"}</h1>
         <p style="color: red;text-align: center;">GIẢI ${
-          currentPrize.name || "Chưa có thông tin giải"
+          currentPrize || "Chưa có thông tin giải"
         }</p>
         <p>${resultInfo[1] || "Chưa có thông tin"}</p>
         <p>${resultInfo[2] || "Chưa có thông tin"}</p>
@@ -742,3 +786,33 @@ document.getElementById("historyButton").addEventListener("click", () => {
 //     }
 //   });
 // });
+
+$(document).ready(function () {
+  // Khi nhấn nút QUAY
+  $("#spinButton").click(function () {
+    // Hiện video quay và tự động phát
+    var video = $("#spinVideo")[0];
+    $("#spinVideo").show();
+    video.play();
+
+    // Khi video kết thúc, ẩn nó đi
+    video.onended = function () {
+      $("#spinVideo").hide();
+    };
+  });
+});
+
+$(document).ready(function () {
+  // Khi nhấn nút QUAY
+  $("#reSpinButton").click(function () {
+    // Hiện video quay và tự động phát
+    var video = $("#spinVideo")[0];
+    $("#spinVideo").show();
+    video.play();
+
+    // Khi video kết thúc, ẩn nó đi
+    video.onended = function () {
+      $("#spinVideo").hide();
+    };
+  });
+});
