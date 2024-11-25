@@ -152,9 +152,9 @@ let thirdPrizeFixedWinnerSelected = false; // Biến cờ để kiểm tra xem n
 
 const fixedWinners = {
   "ĐẶC BIỆT": ["00000104"],
-  NHẤT: ["00000278", "00000117", "00000188"],
-  NHÌ: ["00000182", "00000151", "00000021", "00000045", "00000217"],
-  BA: ["00000191"],
+  NHẤT: ["00000001", "00000017"],
+  NHÌ: ["00000022", "00000051", "00000121"],
+  BA: ["00000100"],
 };
 
 // Define selected winners for tracking
@@ -518,19 +518,19 @@ document.getElementById("listButton").addEventListener("click", () => {
 const defaultPrizes = [
   {
     name: "BA",
-    count: 7,
+    count: 5,
     spun: 0,
     id: "1",
   },
   {
     name: "NHÌ",
-    count: 5,
+    count: 3,
     spun: 1,
     id: "2",
   },
   {
     name: "NHẤT",
-    count: 3,
+    count: 2,
     spun: 1,
     id: "3",
   },
