@@ -151,10 +151,10 @@ let secondPrizeFixedWinnerSelected = false; // Biến cờ để kiểm tra xem 
 let thirdPrizeFixedWinnerSelected = false; // Biến cờ để kiểm tra xem người cố định đã được chọn chưa
 
 const fixedWinners = {
-  "ĐẶC BIỆT": ["00000104"],
-  NHẤT: ["00000001", "00000017"],
-  NHÌ: ["00000022", "00000051", "00000121"],
-  BA: ["00000100"],
+  "ĐẶC BIỆT": ["00000124"],
+  NHẤT: ["00000138", "00000084"],
+  NHÌ: ["00000100", "00000022", "00000003"],
+  BA: ["00000050"],
 };
 
 // Define selected winners for tracking
@@ -283,9 +283,6 @@ function spin() {
         }</p>
         <p>${resultInfo[1] || "Chưa có thông tin"}</p>
         <p>${resultInfo[2] || "Chưa có thông tin"}</p>
-        <p>${resultInfo[3] || "Chưa có thông tin"}</p>
-        <p>${resultInfo[4] || "Chưa có thông tin"}</p>
-        <p>${resultInfo[5] || "Chưa có thông tin"}</p>
       `;
       document.getElementById("overlay").style.display = "block";
       document.getElementById("result").style.display = "block";
